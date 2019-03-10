@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "watch": "onchange 'sass/**/*.scss' -- npm run kss",
+    "kss": "kss --config kss-config.json"
+  }
+}

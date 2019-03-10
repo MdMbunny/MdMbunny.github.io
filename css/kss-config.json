@@ -1,0 +1,9 @@
+{
+  "title": "Classes CSS",
+  "source": ["sass/"],
+  "destination": "styleguide/",
+  "builder": "node_modules/michelangelo/kss_styleguide/custom-template/",
+  "css": [
+    "../classes.css"
+  ]
+}
