@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Classes CSS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="generator" content="kss-node">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
+    <link rel="stylesheet" href="kss-assets/vendor/prism.css">
+    <link rel="stylesheet" href="kss-assets/css/kss.css">
+    <link rel="stylesheet" href="../classes.css">
+
+  </head>
+
+  <body class="kss-body">
+
+    <!-- header. -->
+    <header class="kss-header">
+      <section class="kss-header__inner">
+        <a class="kss-header__hamburger-trigger">
+          <div class="kss-header__hamburger"></div>
+        </a>
+        <h1 class="kss-header__title kss-title">Classes CSS</h1>
+      </section>
+    </header>
+    <!-- /header. -->
+
+
+    <!-- navigation. -->
+    <section class="kss-navigation">
+      <h1 class="kss-navigation__title kss-title">Classes CSS</h1>
+      <ul class="kss-nav">
+        <li class="kss-nav__item">
+          <a href="index.html">
+            <span class="kss-nav__ref">0</span>
+            <span class="kss-nav__name">Introduction</span>
+          </a>
+        </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-classes.html">
+              <span class="kss-nav__ref">1</span>
+              <span class="kss-nav__name">Classes</span>
+            </a>
+          </li>
+      </ul>
+    </section>
+    <!-- /navigation. -->
+
+
+    <!-- documentation. -->
+    <section class="kss-documentation">
+
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-2" id="kssref-classes-shapes">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>classes.scss</span>, line <span>1522</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-classes-shapes">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">1.8</span>
+                  <span class="kss-section__name">Shapes</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Square.<br>
+<code>[ .square ]</code><br>
+<code>[ .rounded | .rounded-min | .rounded-small | .rounded-medium | .rounded-big | .rounded-max ]</code><br>
+<code>[ .rounded .round-top | .rounded .round-bottom | .rounded .round-left | .rounded .round-right ]</code><br>
+<code>[ .rounded .round-head-left | .rounded .round-head-right ]</code><br>
+<code>[ .rounded .round-foot-left | .rounded .round-foot-right ]</code><br>
+<code>[ .rounded .round-leaf-left | .rounded .round-leaf-right ]</code><br>
+<code>[ .rounded .round-petal-left | .rounded .round-petal-right ]</code><br>
+<code>[ .rounded .round-drop-left | .rounded .round-drop-right ]</code><br>
+<code>[ .circle | .circle-min | .circle-small ]</code></p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div class="sg sg-shapes">
+	<div class="square">Square</div>
+	<div class="rounded">Rounded</div>
+	<div class="rounded-min">Rounded Min</div>
+	<div class="rounded-small">Rounded Small</div>
+	<div class="rounded-medium">Rounded Medium</div>
+	<div class="rounded-big">Rounded Big</div>
+	<div class="rounded-max">Rounded Max</div>
+	<div class="rounded round-top">Rounded Top</div>
+	<div class="rounded round-bottom">Rounded Bottom</div>
+	<div class="rounded round-left">Rounded Left</div>
+	<div class="rounded round-right">Rounded Right</div>
+	<div class="rounded round-head-left">Rounded Head Left</div>
+	<div class="rounded round-head-right">Rounded Head Right</div>
+	<div class="rounded round-foot-left">Rounded Foot Left</div>
+	<div class="rounded round-foot-right">Rounded Foot Right</div>
+	<div class="rounded round-leaf-left">Rounded Leaf Left</div>
+	<div class="rounded round-leaf-right">Rounded Leaf Right</div>
+	<div class="rounded round-petal-left">Rounded Petal Left</div>
+	<div class="rounded round-petal-right">Rounded Petal Right</div>
+	<div class="rounded round-drop-left">Rounded Drop Left</div>
+	<div class="rounded round-drop-right">Rounded Drop Right</div>
+	<div class="circle">Circle</div>
+	<div class="circle-min">Circle Min</div>
+	<div class="circle-small">Circle Small</div>
+</div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;sg sg-shapes&quot;&gt;
+	&lt;div class&#x3D;&quot;square&quot;&gt;Square&lt;/div&gt;
+	&lt;div class&#x3D;&quot;rounded&quot;&gt;Rounded&lt;/div&gt;
+	&lt;div class&#x3D;&quot;rounded-min&quot;&gt;Rounded Min&lt;/div&gt;
+	&lt;div class&#x3D;&quot;rounded-small&quot;&gt;Rounded Small&lt;/div&gt;
+	&lt;div class&#x3D;&quot;rounded-medium&quot;&gt;Rounded Medium&lt;/div&gt;
+	&lt;div class&#x3D;&quot;rounded-big&quot;&gt;Rounded Big&lt;/div&gt;
+	&lt;div class&#x3D;&quot;rounded-max&quot;&gt;Rounded Max&lt;/div&gt;
+	&lt;div class&#x3D;&quot;rounded round-top&quot;&gt;Rounded Top&lt;/div&gt;
+	&lt;div class&#x3D;&quot;rounded round-bottom&quot;&gt;Rounded Bottom&lt;/div&gt;
+	&lt;div class&#x3D;&quot;rounded round-left&quot;&gt;Rounded Left&lt;/div&gt;
+	&lt;div class&#x3D;&quot;rounded round-right&quot;&gt;Rounded Right&lt;/div&gt;
+	&lt;div class&#x3D;&quot;rounded round-head-left&quot;&gt;Rounded Head Left&lt;/div&gt;
+	&lt;div class&#x3D;&quot;rounded round-head-right&quot;&gt;Rounded Head Right&lt;/div&gt;
+	&lt;div class&#x3D;&quot;rounded round-foot-left&quot;&gt;Rounded Foot Left&lt;/div&gt;
+	&lt;div class&#x3D;&quot;rounded round-foot-right&quot;&gt;Rounded Foot Right&lt;/div&gt;
+	&lt;div class&#x3D;&quot;rounded round-leaf-left&quot;&gt;Rounded Leaf Left&lt;/div&gt;
+	&lt;div class&#x3D;&quot;rounded round-leaf-right&quot;&gt;Rounded Leaf Right&lt;/div&gt;
+	&lt;div class&#x3D;&quot;rounded round-petal-left&quot;&gt;Rounded Petal Left&lt;/div&gt;
+	&lt;div class&#x3D;&quot;rounded round-petal-right&quot;&gt;Rounded Petal Right&lt;/div&gt;
+	&lt;div class&#x3D;&quot;rounded round-drop-left&quot;&gt;Rounded Drop Left&lt;/div&gt;
+	&lt;div class&#x3D;&quot;rounded round-drop-right&quot;&gt;Rounded Drop Right&lt;/div&gt;
+	&lt;div class&#x3D;&quot;circle&quot;&gt;Circle&lt;/div&gt;
+	&lt;div class&#x3D;&quot;circle-min&quot;&gt;Circle Min&lt;/div&gt;
+	&lt;div class&#x3D;&quot;circle-small&quot;&gt;Circle Small&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </header>
+    </section>
+    <!-- /documentation. -->
+
+
+
+  <!-- scripts. -->
+  <script src="kss-assets/vendor/jquery.js"></script>
+  <script src="kss-assets/vendor/prism.js"></script>
+  <script src="kss-assets/js/kss.js"></script>
+  
+  <!-- /scripts. -->
+
+  </body>
+</html>
