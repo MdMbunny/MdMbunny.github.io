@@ -20,7 +20,8 @@ button:not(.disabled) {
 ----------------------------------------------------------------
 
 0.0 Styleguide
-1.0 Classes
+1.0 UI
+2.0 Classes
 
 /*--------------------------------------------------------------
 0.0 Styleguide
@@ -171,7 +172,378 @@ button:not(.disabled) {
   text-align: center; }
 
 /*--------------------------------------------------------------
-1.0 Classes
+1.0 UI
+--------------------------------------------------------------*/
+.scm-ui {
+  /*width: auto;*/
+  position: absolute;
+  z-index: 200;
+  pointer-events: none;
+  display: flex;
+  flex-flow: row wrap;
+  /*justify-content: space-between;*/
+  font-size: 16px; }
+
+.scm-ui.relative {
+  z-index: 1; }
+
+.scm-ui.-top {
+  top: 0; }
+
+.scm-ui.-top {
+  -webkit-transition-property: margin-top;
+  -webkit-transition-duration: .2s;
+  -webkit-transition-timing-function: ease;
+  -webkit-transition-delay: 0s;
+  transition-property: margin-top;
+  transition-duration: .2s;
+  transition-timing-function: ease;
+  transition-delay: 0s; }
+
+.scm-ui.-bottom {
+  bottom: 0; }
+
+.scm-ui.-bottom {
+  -webkit-transition-property: margin-bottom;
+  -webkit-transition-duration: .2s;
+  -webkit-transition-timing-function: ease;
+  -webkit-transition-delay: 0s;
+  transition-property: margin-bottom;
+  transition-duration: .2s;
+  transition-timing-function: ease;
+  transition-delay: 0s; }
+
+.scm-ui.-left {
+  left: 0; }
+
+.scm-ui.-right {
+  right: 0; }
+
+.scm-ui.-left50 {
+  left: 50%; }
+
+.scm-ui.-right50 {
+  right: 50%; }
+
+.scm-ui-content {
+  padding: .75em .75em .75em .75em;
+  width: 100%;
+  background-color: #000;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap; }
+
+.scm-ui-content.disabled .scm-ui-label,
+.scm-ui-content.disabled .scm-ui-label * {
+  pointer-events: none !important;
+  cursor: default !important; }
+
+.scm-ui.text-left .scm-ui-content {
+  justify-content: flex-start; }
+
+.scm-ui.text-right .scm-ui-content {
+  justify-content: flex-end;
+  align-self: flex-end; }
+
+.scm-ui-content > * {
+  pointer-events: initial; }
+
+.scm-ui-content label:not(.scm-ui-button) {
+  color: #FFF;
+  line-height: 3em; }
+
+.ui-sortable {
+  display: block; }
+
+/*--------------------------------------------------------------
+UI Labels
+--------------------------------------------------------------*/
+.scm-ui-label {
+  padding: 0 .5em;
+  border-radius: .5em;
+  border: 0;
+  /*background-color: #000;
+  color: #FFF;*/
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: normal;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  height: 2.5em;
+  min-height: 2.5em;
+  min-width: 2.5em;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  margin: .25em; }
+
+.scm-ui-label.-vert {
+  width: 2em;
+  height: auto;
+  flex-flow: column nowrap; }
+
+.scm-ui-label.is-file {
+  border: 1px dashed #FFF; }
+
+.scm-ui-label.text .faicon {
+  margin-right: .5em; }
+
+/*--------------------------------------------------------------
+UI Buttons
+--------------------------------------------------------------*/
+.scm-ui-button {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  background-color: #FFF;
+  color: #000;
+  opacity: 1; }
+
+.scm-ui-toggle {
+  border: 1px dashed transparent; }
+
+.scm-ui-label.on {
+  border-style: solid; }
+
+.scm-ui-button,
+.scm-ui-button.color-it {
+  -webkit-transition: all .2s;
+  transition: all .2s; }
+
+.scm-ui-button.ui-sortable-handle {
+  -webkit-transition: none;
+  transition: none; }
+
+.scm-ui-toggle:not(.off):not(.color-it):not(.no-button):hover,
+.scm-ui-toggle:not(.off):not(.color-it):not(.no-button):active,
+.scm-ui-button:not(.color-it):hover,
+.scm-ui-button:not(.color-it):active,
+body.keyboard .scm-ui-button:not(.off):not(.color-it):focus,
+body.keyboard .scm-ui-button:not(.off):not(.color-it).focus {
+  background-color: #ddd; }
+
+.scm-ui-button.no-button:hover,
+.scm-ui-button.no-button:active,
+body.keyboard .scm-ui-button.no-button:focus,
+body.keyboard .scm-ui-button.no-button.focus,
+.scm-ui-button.color-it:not(.off):hover,
+.scm-ui-button.color-it:not(.off):active,
+body.keyboard .scm-ui-button.color-it:not(.off):focus,
+body.keyboard .scm-ui-button.color-it:not(.off).focus {
+  opacity: .8; }
+
+.scm-ui-label.on:not(.color-it):active {
+  background-color: #DDD; }
+
+.scm-ui-label.off:hover,
+.scm-ui-label.off:active,
+body.keyboard .scm-ui-label.off:focus,
+body.keyboard .scm-ui-label.off.focus {
+  border-style: solid; }
+
+.scm-ui-label.off:not(.color-it),
+.scm-ui-label.off:not(.color-it):focus,
+.scm-ui-label.off:not(.color-it).focus {
+  background-color: #000;
+  color: #FFF;
+  border-color: #FFF; }
+
+.scm-ui-label.off:not(.color-it):active {
+  border-color: #333;
+  background-color: #444; }
+
+.scm-ui-content .scm-ui-button.disabled {
+  background-color: #000;
+  color: #FFF;
+  border-color: transparent;
+  cursor: default; }
+
+.scm-ui-button .faicon + span {
+  margin-left: .5em; }
+
+/*--------------------------------------------------------------
+UI No Buttons
+--------------------------------------------------------------*/
+.scm-ui-button.no-button:active,
+.scm-ui-button.no-button:hover,
+.scm-ui-button.no-button:focus,
+.scm-ui-button.no-button.focus,
+.scm-ui-label.no-button {
+  border: 0;
+  padding: 0;
+  background-color: transparent; }
+
+.scm-ui-label.no-button .faicon {
+  font-size: 2em; }
+
+/*--------------------------------------------------------------
+UI Composition
+--------------------------------------------------------------*/
+.scm-ui-content .scm-ui-comp {
+  padding: 0;
+  align-items: stretch; }
+
+.scm-ui-content .scm-ui-comp > * {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; }
+
+.scm-ui-content .scm-ui-comp.save {
+  min-width: 8em; }
+
+.scm-ui-content .scm-ui-comp .faicon {
+  margin: 0 1em; }
+
+.scm-ui-content .scm-ui-comp .prepended {
+  height: 100%;
+  left: 0; }
+
+.scm-ui-content .scm-ui-comp .appended {
+  height: 100%;
+  right: 0; }
+
+.scm-ui-content .scm-ui-select > select,
+.scm-ui-content .scm-ui-input > input {
+  margin: 0;
+  border: 0;
+  border-radius: .5em;
+  height: auto;
+  min-height: 2.5em !important;
+  line-height: initial;
+  -webkit-transition: none;
+  transition: none; }
+
+.scm-ui-content .scm-ui-select.icon > select,
+.scm-ui-content .scm-ui-input.icon > input {
+  border-radius: .5em 0 0 .5em; }
+
+.scm-ui-content .scm-ui-select.icon > select.before,
+.scm-ui-content .scm-ui-input.icon > input.before {
+  border-radius: 0 .5em .5em 0; }
+
+.scm-ui-content input.number-input {
+  text-align: right;
+  padding-right: .25em; }
+
+.scm-ui-content .scm-ui-input > input.number-input::-webkit-outer-spin-button,
+.scm-ui-content .scm-ui-input > input.number-input::-webkit-inner-spin-button {
+  margin-left: .25em; }
+
+.scm-ui-content .scm-ui-timer > .separator {
+  background-color: #FFF; }
+
+.scm-ui-content .scm-ui-select.icon .faicon {
+  pointer-events: none; }
+
+.scm-ui-content .scm-ui-select.icon select {
+  padding-right: 3em; }
+
+.scm-ui-content .scm-ui-input input {
+  color: #000; }
+
+.scm-ui-content .scm-ui-select select {
+  color: #000;
+  background-color: transparent; }
+
+.scm-ui-content .scm-ui-input.disabled input,
+.scm-ui-content .scm-ui-select.disabled select {
+  background-color: transparent;
+  color: #FFF; }
+
+input.scm-ui-upload-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  top: -9999px;
+  left: -9999px;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1; }
+
+/*--------------------------------------------------------------
+UI Tabs
+--------------------------------------------------------------*/
+.scm-ui-tabs {
+  background-color: transparent;
+  width: auto;
+  align-items: flex-start; }
+
+body:not(.disabled) .scm-ui-tabs .scm-ui-tab {
+  pointer-events: all; }
+
+/*--------------------------------------------------------------
+UI Button 3D
+--------------------------------------------------------------*/
+.scm-ui-label.button3d {
+  flex-grow: 1;
+  box-shadow: .2em .2em 0 0 #777; }
+
+.scm-ui-label.button3d.action {
+  border: 0; }
+
+.scm-ui-label.button3d.color-it {
+  box-shadow: .2em .2em 0 0; }
+
+.scm-ui-label.button3d.on.lighter {
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5); }
+
+.scm-ui-label.button3d.on.darker {
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5); }
+
+.scm-ui-label.button3d.off {
+  /*margin: .45em .05em .05em .45em;*/
+  margin: .5em .0em .0em .5em;
+  box-shadow: 0 0 0 0 transparent; }
+
+body.keyboard .scm-ui-label.button3d.on:focus,
+body.keyboard .scm-ui-label.button3d.on.focus,
+.scm-ui-label.button3d.on:active {
+  border-color: #333; }
+
+body.keyboard .scm-ui-label.button3d:focus,
+body.keyboard .scm-ui-label.button3d.focus,
+.scm-ui-label.scm-ui-input.button3d:focus,
+.scm-ui-label.scm-ui-input.button3d.focus,
+.scm-ui-label.button3d:active {
+  box-shadow: -1px -1px 0 0 #333;
+  padding: .05em .45em 0 .5em;
+  margin: .55em -.0em 0em .55em;
+  height: 2.45em;
+  min-height: 2.45em; }
+
+/*--------------------------------------------------------------
+UI Login Form
+--------------------------------------------------------------*/
+.scm-ui-content .scm-ui-label.show-forgot {
+  text-align: center;
+  width: 100%;
+  background-color: transparent;
+  cursor: default; }
+
+.scm-ui-content .scm-ui-label.show-forgot label {
+  cursor: pointer;
+  color: #000; }
+
+.scm-ui-content .scm-ui-label.show-forgot:not(.disabled) label:hover {
+  text-decoration: underline; }
+
+input#login-show-forgot,
+input#login-show-forgot + form,
+input#login-show-forgot:checked + form + form {
+  display: none; }
+
+input#login-show-forgot:checked + form {
+  display: flex; }
+
+/*--------------------------------------------------------------
+2.0 Classes
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 Classes Typography
@@ -718,377 +1090,6 @@ Classes Shapes
 
 .round-drop-right {
   border-top-right-radius: 0 !important; }
-
-/*--------------------------------------------------------------
-Classes UI
---------------------------------------------------------------*/
-.scm-ui {
-  /*width: auto;*/
-  position: absolute;
-  z-index: 200;
-  pointer-events: none;
-  display: flex;
-  flex-flow: row wrap;
-  /*justify-content: space-between;*/
-  font-size: 16px; }
-
-.scm-ui.relative {
-  z-index: 1; }
-
-.scm-ui.-top {
-  top: 0; }
-
-.scm-ui.-top {
-  -webkit-transition-property: margin-top;
-  -webkit-transition-duration: .2s;
-  -webkit-transition-timing-function: ease;
-  -webkit-transition-delay: 0s;
-  transition-property: margin-top;
-  transition-duration: .2s;
-  transition-timing-function: ease;
-  transition-delay: 0s; }
-
-.scm-ui.-bottom {
-  bottom: 0; }
-
-.scm-ui.-bottom {
-  -webkit-transition-property: margin-bottom;
-  -webkit-transition-duration: .2s;
-  -webkit-transition-timing-function: ease;
-  -webkit-transition-delay: 0s;
-  transition-property: margin-bottom;
-  transition-duration: .2s;
-  transition-timing-function: ease;
-  transition-delay: 0s; }
-
-.scm-ui.-left {
-  left: 0; }
-
-.scm-ui.-right {
-  right: 0; }
-
-.scm-ui.-left50 {
-  left: 50%; }
-
-.scm-ui.-right50 {
-  right: 50%; }
-
-.scm-ui-content {
-  padding: .75em .75em .75em .75em;
-  width: 100%;
-  background-color: #000;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap; }
-
-.scm-ui-content.disabled .scm-ui-label,
-.scm-ui-content.disabled .scm-ui-label * {
-  pointer-events: none !important;
-  cursor: default !important; }
-
-.scm-ui.text-left .scm-ui-content {
-  justify-content: flex-start; }
-
-.scm-ui.text-right .scm-ui-content {
-  justify-content: flex-end;
-  align-self: flex-end; }
-
-.scm-ui-content > * {
-  pointer-events: initial; }
-
-.scm-ui-content label:not(.scm-ui-button) {
-  color: #FFF;
-  line-height: 3em; }
-
-.ui-sortable {
-  display: block; }
-
-/*--------------------------------------------------------------
-UI Labels
---------------------------------------------------------------*/
-.scm-ui-label {
-  padding: 0 .5em;
-  border-radius: .5em;
-  border: 0;
-  /*background-color: #000;
-  color: #FFF;*/
-  font-size: 1em;
-  line-height: 1em;
-  font-weight: normal;
-  vertical-align: middle;
-  text-decoration: none;
-  white-space: nowrap;
-  cursor: pointer;
-  height: 2.5em;
-  min-height: 2.5em;
-  min-width: 2.5em;
-  display: inline-flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  position: relative;
-  margin: .25em; }
-
-.scm-ui-label.-vert {
-  width: 2em;
-  height: auto;
-  flex-flow: column nowrap; }
-
-.scm-ui-label.is-file {
-  border: 1px dashed #FFF; }
-
-.scm-ui-label.text .faicon {
-  margin-right: .5em; }
-
-/*--------------------------------------------------------------
-UI Buttons
---------------------------------------------------------------*/
-.scm-ui-button {
-  -webkit-transition: all .2s;
-  transition: all .2s;
-  background-color: #FFF;
-  color: #000;
-  opacity: 1; }
-
-.scm-ui-toggle {
-  border: 1px dashed transparent; }
-
-.scm-ui-label.on {
-  border-style: solid; }
-
-.scm-ui-button,
-.scm-ui-button.color-it {
-  -webkit-transition: all .2s;
-  transition: all .2s; }
-
-.scm-ui-button.ui-sortable-handle {
-  -webkit-transition: none;
-  transition: none; }
-
-.scm-ui-toggle:not(.off):not(.color-it):not(.no-button):hover,
-.scm-ui-toggle:not(.off):not(.color-it):not(.no-button):active,
-.scm-ui-button:not(.color-it):hover,
-.scm-ui-button:not(.color-it):active,
-body.keyboard .scm-ui-button:not(.off):not(.color-it):focus,
-body.keyboard .scm-ui-button:not(.off):not(.color-it).focus {
-  background-color: #ddd; }
-
-.scm-ui-button.no-button:hover,
-.scm-ui-button.no-button:active,
-body.keyboard .scm-ui-button.no-button:focus,
-body.keyboard .scm-ui-button.no-button.focus,
-.scm-ui-button.color-it:not(.off):hover,
-.scm-ui-button.color-it:not(.off):active,
-body.keyboard .scm-ui-button.color-it:not(.off):focus,
-body.keyboard .scm-ui-button.color-it:not(.off).focus {
-  opacity: .8; }
-
-.scm-ui-label.on:not(.color-it):active {
-  background-color: #DDD; }
-
-.scm-ui-label.off:hover,
-.scm-ui-label.off:active,
-body.keyboard .scm-ui-label.off:focus,
-body.keyboard .scm-ui-label.off.focus {
-  border-style: solid; }
-
-.scm-ui-label.off:not(.color-it),
-.scm-ui-label.off:not(.color-it):focus,
-.scm-ui-label.off:not(.color-it).focus {
-  background-color: #000;
-  color: #FFF;
-  border-color: #FFF; }
-
-.scm-ui-label.off:not(.color-it):active {
-  border-color: #333;
-  background-color: #444; }
-
-.scm-ui-content .scm-ui-button.disabled {
-  background-color: #000;
-  color: #FFF;
-  border-color: transparent;
-  cursor: default; }
-
-.scm-ui-button .faicon + span {
-  margin-left: .5em; }
-
-/*--------------------------------------------------------------
-UI No Buttons
---------------------------------------------------------------*/
-.scm-ui-button.no-button:active,
-.scm-ui-button.no-button:hover,
-.scm-ui-button.no-button:focus,
-.scm-ui-button.no-button.focus,
-.scm-ui-label.no-button {
-  border: 0;
-  padding: 0;
-  background-color: transparent; }
-
-.scm-ui-label.no-button .faicon {
-  font-size: 2em; }
-
-/*--------------------------------------------------------------
-UI Composition
---------------------------------------------------------------*/
-.scm-ui-content .scm-ui-comp {
-  padding: 0;
-  align-items: stretch; }
-
-.scm-ui-content .scm-ui-comp > * {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center; }
-
-.scm-ui-content .scm-ui-comp.save {
-  min-width: 8em; }
-
-.scm-ui-content .scm-ui-comp .faicon {
-  margin: 0 1em; }
-
-.scm-ui-content .scm-ui-comp .prepended {
-  height: 100%;
-  left: 0; }
-
-.scm-ui-content .scm-ui-comp .appended {
-  height: 100%;
-  right: 0; }
-
-.scm-ui-content .scm-ui-select > select,
-.scm-ui-content .scm-ui-input > input {
-  margin: 0;
-  border: 0;
-  border-radius: .5em;
-  height: auto;
-  min-height: 2.5em !important;
-  line-height: initial;
-  -webkit-transition: none;
-  transition: none; }
-
-.scm-ui-content .scm-ui-select.icon > select,
-.scm-ui-content .scm-ui-input.icon > input {
-  border-radius: .5em 0 0 .5em; }
-
-.scm-ui-content .scm-ui-select.icon > select.before,
-.scm-ui-content .scm-ui-input.icon > input.before {
-  border-radius: 0 .5em .5em 0; }
-
-.scm-ui-content input.number-input {
-  text-align: right;
-  padding-right: .25em; }
-
-.scm-ui-content .scm-ui-input > input.number-input::-webkit-outer-spin-button,
-.scm-ui-content .scm-ui-input > input.number-input::-webkit-inner-spin-button {
-  margin-left: .25em; }
-
-.scm-ui-content .scm-ui-timer > .separator {
-  background-color: #FFF; }
-
-.scm-ui-content .scm-ui-select.icon .faicon {
-  pointer-events: none; }
-
-.scm-ui-content .scm-ui-select.icon select {
-  padding-right: 3em; }
-
-.scm-ui-content .scm-ui-input input {
-  color: #000; }
-
-.scm-ui-content .scm-ui-select select {
-  color: #000;
-  background-color: transparent; }
-
-.scm-ui-content .scm-ui-input.disabled input,
-.scm-ui-content .scm-ui-select.disabled select {
-  background-color: transparent;
-  color: #FFF; }
-
-input.scm-ui-upload-input {
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
-  top: -9999px;
-  left: -9999px;
-  overflow: hidden;
-  position: absolute;
-  z-index: -1; }
-
-/*--------------------------------------------------------------
-UI Tabs
---------------------------------------------------------------*/
-.scm-ui-tabs {
-  background-color: transparent;
-  width: auto;
-  align-items: flex-start; }
-
-body:not(.disabled) .scm-ui-tabs .scm-ui-tab {
-  pointer-events: all; }
-
-/*--------------------------------------------------------------
-UI Button 3D
---------------------------------------------------------------*/
-.scm-ui-label.button3d {
-  flex-grow: 1;
-  box-shadow: .2em .2em 0 0 #777; }
-
-.scm-ui-label.button3d.action {
-  border: 0; }
-
-.scm-ui-label.button3d.color-it {
-  box-shadow: .2em .2em 0 0; }
-
-.scm-ui-label.button3d.on.lighter {
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5); }
-
-.scm-ui-label.button3d.on.darker {
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5); }
-
-.scm-ui-label.button3d.off {
-  /*margin: .45em .05em .05em .45em;*/
-  margin: .5em .0em .0em .5em;
-  box-shadow: 0 0 0 0 transparent; }
-
-body.keyboard .scm-ui-label.button3d.on:focus,
-body.keyboard .scm-ui-label.button3d.on.focus,
-.scm-ui-label.button3d.on:active {
-  border-color: #333; }
-
-body.keyboard .scm-ui-label.button3d:focus,
-body.keyboard .scm-ui-label.button3d.focus,
-.scm-ui-label.scm-ui-input.button3d:focus,
-.scm-ui-label.scm-ui-input.button3d.focus,
-.scm-ui-label.button3d:active {
-  box-shadow: -1px -1px 0 0 #333;
-  padding: .05em .45em 0 .5em;
-  margin: .55em -.0em 0em .55em;
-  height: 2.45em;
-  min-height: 2.45em; }
-
-/*--------------------------------------------------------------
-UI Login Form
---------------------------------------------------------------*/
-.scm-ui-content .scm-ui-label.show-forgot {
-  text-align: center;
-  width: 100%;
-  background-color: transparent;
-  cursor: default; }
-
-.scm-ui-content .scm-ui-label.show-forgot label {
-  cursor: pointer;
-  color: #000; }
-
-.scm-ui-content .scm-ui-label.show-forgot:not(.disabled) label:hover {
-  text-decoration: underline; }
-
-input#login-show-forgot,
-input#login-show-forgot + form,
-input#login-show-forgot:checked + form + form {
-  display: none; }
-
-input#login-show-forgot:checked + form {
-  display: flex; }
 
 /*--------------------------------------------------------------
 Classes Colors
