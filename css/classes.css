@@ -1112,6 +1112,7 @@ Classes Colors
   fill: #FFF; }
 
 *[data-color="white"],
+.pin.white > i,
 .white > .pin,
 .bg-white,
 .bg-white:after,
@@ -1126,6 +1127,7 @@ Classes Colors
   color: #FFF; }
 
 *[data-color="black"],
+.pin.black > i,
 .black > .pin,
 .bg-black,
 .bg-black:after,
@@ -1140,6 +1142,7 @@ Classes Colors
   color: #000; }
 
 *[data-color="light-black"],
+.pin.light-black > i,
 .light-black > .pin,
 .bg-light-black,
 .bg-light-black:after,
@@ -1156,7 +1159,9 @@ Classes Colors
 .bg-silver,
 .silver > .pin,
 *[data-color="silver"],
+.pin.silver > i,
 *[data-color="grey"],
+.pin.grey > i,
 .grey > .pin,
 .bg-grey,
 .bg-grey:after,
@@ -1173,6 +1178,7 @@ Classes Colors
   color: #bbb; }
 
 *[data-color="light-grey"],
+.pin.light-grey > i,
 .light-grey > .pin,
 .bg-light-grey,
 .bg-light-grey:after,
@@ -1187,6 +1193,7 @@ Classes Colors
   color: #ddd; }
 
 *[data-color="dark-grey"],
+.pin.dark-grey > i,
 .dark-grey > .pin,
 .bg-dark-grey,
 .bg-dark-grey:after,
@@ -1203,7 +1210,9 @@ Classes Colors
 .bg-gold,
 .gold > .pin,
 *[data-color="gold"],
+.pin.gold > i,
 *[data-color="yellow"],
+.pin.yellow > i,
 .yellow > .pin,
 .bg-yellow,
 .bg-yellow:after,
@@ -1222,7 +1231,9 @@ Classes Colors
 .bg-bronze,
 .bronze > .pin,
 *[data-color="bronze"],
+.pin.bronze > i,
 *[data-color="orange"],
+.pin.orange > i,
 .orange > .pin,
 .bg-orange,
 .bg-orange:after,
@@ -1241,7 +1252,9 @@ Classes Colors
 .bg-wood,
 .wood > .pin,
 *[data-color="wood"],
+.pin.wood > i,
 *[data-color="brown"],
+.pin.brown > i,
 .brown > .pin,
 .bg-brown,
 .bg-brown:after,
@@ -1258,6 +1271,7 @@ Classes Colors
   color: #9a714d; }
 
 *[data-color="blue"],
+.pin.blue > i,
 .blue > .pin,
 .bg-blue,
 .bg-blue:after,
@@ -1272,6 +1286,7 @@ Classes Colors
   color: #1c3fff; }
 
 *[data-color="light-blue"],
+.pin.light-blue > i,
 .light-blue > .pin,
 .bg-light-blue,
 .bg-light-blue:after,
@@ -1286,6 +1301,7 @@ Classes Colors
   color: #57bef1; }
 
 *[data-color="green"],
+.pin.green > i,
 .green > .pin,
 .bg-green,
 .bg-green:after,
@@ -1300,6 +1316,7 @@ Classes Colors
   color: #1d9401; }
 
 *[data-color="light-green"],
+.pin.light-green > i,
 .light-green > .pin,
 .bg-light-green,
 .bg-light-green:after,
@@ -1314,6 +1331,7 @@ Classes Colors
   color: #7ec14d; }
 
 *[data-color="red"],
+.pin.red > i,
 .red > .pin,
 .bg-red,
 .bg-red:after,
@@ -1328,6 +1346,7 @@ Classes Colors
   color: #e03c5c; }
 
 *[data-color="light-red"],
+.pin.light-red > i,
 .light-red > .pin,
 .bg-light-red,
 .bg-light-red:after,
@@ -1342,6 +1361,7 @@ Classes Colors
   color: #d46d6d; }
 
 *[data-color="purple"],
+.pin.purple > i,
 .purple > .pin,
 .bg-purple,
 .bg-purple:after,
@@ -1356,6 +1376,7 @@ Classes Colors
   color: #8823b9; }
 
 *[data-color="light-purple"],
+.pin.light-purple > i,
 .light-purple > .pin,
 .bg-light-purple,
 .bg-light-purple:after,
@@ -1370,6 +1391,7 @@ Classes Colors
   color: #c48be0; }
 
 *[data-color="pink"],
+.pin.pink > i,
 .pink > .pin,
 .bg-pink,
 .bg-pink:after,
@@ -1384,6 +1406,7 @@ Classes Colors
   color: #e681df; }
 
 *[data-color="light-pink"],
+.pin.light-pink > i,
 .light-pink > .pin,
 .bg-light-pink,
 .bg-light-pink:after,
