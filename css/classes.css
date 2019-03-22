@@ -20,8 +20,7 @@ button:not(.disabled) {
 ----------------------------------------------------------------
 
 0.0 Styleguide
-1.0 UI
-2.0 Classes
+1.0 Classes
 
 /*--------------------------------------------------------------
 0.0 Styleguide
@@ -172,7 +171,556 @@ button:not(.disabled) {
   text-align: center; }
 
 /*--------------------------------------------------------------
-1.0 UI
+1.0 Classes
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+Classes Typography
+--------------------------------------------------------------*/
+.min,
+.text-min,
+.minion,
+.text-minion {
+  font-size: 60%; }
+
+.half,
+.text-half {
+  font-size: 75%; }
+
+.small,
+.text-small {
+  font-size: 85%;
+  line-height: 150%; }
+
+.normal,
+.text-normal {
+  font-size: 100%; }
+
+.medium,
+.text-medium {
+  font-size: 125%; }
+
+.big,
+.text-big {
+  font-size: 150%; }
+
+.huge,
+.text-huge {
+  font-size: 180%; }
+
+.max,
+.text-max,
+.double,
+.text-double {
+  font-size: 200%; }
+
+.triple,
+.text-triple {
+  font-size: 300%; }
+
+.quadruple,
+.text-quadruple {
+  font-size: 400%; }
+
+.left, .textleft, .text-left,
+.content-left > *, .all-left * {
+  text-align: left; }
+
+.right, .textright, .text-right,
+.content-right > *, .all-right * {
+  text-align: right; }
+
+.center, .textcenter, .text-center,
+.content-center > *, .all-center * {
+  text-align: center; }
+
+.justify, .textjustify, .text-justify,
+.content-justify > *, .all-justify * {
+  text-align: justify; }
+
+/*--------------------------------------------------------------
+Classes Links
+--------------------------------------------------------------*/
+.disabled,
+.disabled *:not(.enabled) {
+  pointer-events: none; }
+
+.enabled,
+.disabled .enabled *:not(.disabled) {
+  pointer-events: auto; }
+
+.pointer, .pointer * {
+  cursor: pointer; }
+
+.no-pointer, .no-pointer * {
+  cursor: default; }
+
+/*--------------------------------------------------------------
+Classes Images
+--------------------------------------------------------------*/
+.image-banner,
+.mask {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  width: 100%; }
+
+.image-banner img,
+.mask img {
+  max-width: initial;
+  max-height: initial;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  margin: auto;
+  left: -9999px;
+  right: -9999px;
+  top: 0%; }
+
+.image-banner img.landscape,
+.mask img.landscape {
+  min-height: 100%; }
+
+.image-banner img.portrait,
+.mask img.portrait {
+  min-width: 100%; }
+
+.image-banner.-middle img,
+.mask.-middle img {
+  top: -100%;
+  bottom: -100%; }
+
+.image-banner.-bottom img,
+.mask.-bottom img {
+  top: initial;
+  bottom: 0%; }
+
+.tofull .image-banner img,
+.tofull .mask img {
+  min-height: 100%;
+  max-width: initial;
+  width: auto;
+  left: -100%;
+  right: -100%; }
+
+.image-banner span,
+.mask span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #FFF;
+  padding: 1em;
+  text-align: left;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center; }
+
+.pixelated {
+  image-rendering: pixelated; }
+
+/*--------------------------------------------------------------
+Classes Display
+--------------------------------------------------------------*/
+.hidden, .invisible, .none, .displaynone, .display-none {
+  display: none !important; }
+
+.block, .displayblock, .display-block {
+  display: block; }
+
+.inlineblock, .displayinlineblock, .display-inline-block, [data-switch] {
+  display: inline-block;
+  vertical-align: top; }
+
+.inline, .displayinline, .display-inline {
+  display: inline; }
+
+.-column {
+  display: flex;
+  flex-direction: column !important; }
+
+.-row {
+  display: flex;
+  flex-direction: row !important; }
+
+.-wrap {
+  display: flex;
+  flex-wrap: wrap !important; }
+
+.-nowrap {
+  display: flex;
+  flex-wrap: nowrap !important; }
+
+.-astart {
+  align-items: flex-start !important; }
+
+.-aend {
+  align-items: flex-end !important; }
+
+.-acenter {
+  align-items: center !important; }
+
+.-astretch {
+  align-items: stretch !important; }
+
+.-jstart {
+  justify-content: flex-start !important; }
+
+.-jend {
+  justify-content: flex-end !important; }
+
+.-jcenter {
+  justify-content: center !important; }
+
+.-jstretch {
+  justify-content: stretch !important; }
+
+.-jaround {
+  justify-content: space-around !important; }
+
+.-jbetween {
+  justify-content: space-between !important; }
+
+.-grow {
+  flex-grow: 1; }
+
+.-nogrow {
+  flex-grow: 0; }
+
+/*--------------------------------------------------------------
+Classes Position
+--------------------------------------------------------------*/
+.affix, .fixed, .positionfixed, .position-fixed {
+  position: fixed !important; }
+
+.absolute, .positionabsolute, .position-absolute {
+  position: absolute !important; }
+
+.relative, .positionrelative, .position-relative {
+  position: relative !important; }
+
+.affix-bottom, .fixed-bottom, .positionfixed-bottom, .position-fixed-bottom,
+.absolute-bottom, .positionabsolute-bottom, .position-absolute-bottom,
+.relative-bottom, .positionrelative-bottom, .position-relative-bottom {
+  bottom: 0; }
+
+.affix-top, .fixed-top, .positionfixed-top, .position-fixed-top,
+.absolute-top, .positionabsolute-top, .position-absolute-top,
+.relative-top, .positionrelative-top, .position-relative-top {
+  top: 0; }
+
+.affix-left, .fixed-left, .positionfixed-left, .position-fixed-left,
+.absolute-left, .positionabsolute-left, .position-absolute-left,
+.relative-left, .positionrelative-left, .position-relative-left {
+  left: 0; }
+
+.affix-right, .fixed-right, .positionfixed-right, .position-fixed-right,
+.absolute-right, .positionabsolute-right, .position-absolute-right,
+.relative-right, .positionrelative-right, .position-relative-right {
+  right: 0; }
+
+.fixed.middle {
+  top: 50%;
+  left: 50%;
+  margin: -.5em 0 0 -.5em; }
+
+.absolute.middle {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+.overlay {
+  position: absolute !important;
+  z-index: 1;
+  left: inherit;
+  top: inherit; }
+
+.underlay {
+  position: absolute;
+  z-index: -1;
+  left: 0; }
+
+/*--------------------------------------------------------------
+Classes Floating
+--------------------------------------------------------------*/
+.align-none, .alignnone, .float-none, .floatnone,
+.content-float-none > *, .all-float-none * {
+  float: none;
+  clear: both;
+  display: block !important; }
+
+.align-left, .alignleft, .float-left, .floatleft,
+.content-float-left > *, .all-float-left * {
+  float: left;
+  clear: none; }
+
+.align-right, .alignright, .float-right, .floatright,
+.content-float-right > *, .all-float-right * {
+  float: right;
+  clear: none; }
+
+.align-center, .aligncenter, .float-center, .floatcenter,
+.content-float-center > *, .all-float-center * {
+  clear: both;
+  margin: 0 auto;
+  display: block; }
+
+.clear-none {
+  clear: none !important; }
+
+.clearfix,
+.clear:before,
+.clear:after {
+  content: "";
+  display: table; }
+
+.clearfix,
+.clear:after {
+  clear: both; }
+
+/*--------------------------------------------------------------
+Classes Layout
+--------------------------------------------------------------*/
+.prepend {
+  margin-right: .3em; }
+
+.append {
+  margin-left: .3em; }
+
+blockquote .append {
+  margin-left: .2em; }
+
+.scroll {
+  overflow-y: scroll !important; }
+
+.no-scroll {
+  overflow: hidden !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important; }
+
+.no-pad {
+  padding: 0 !important; }
+
+.box,
+.layer {
+  position: absolute;
+  overflow: visible;
+  display: block;
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  vertical-align: top;
+  background: transparent;
+  pointer-events: none; }
+
+.fullheight, .full-height {
+  height: 100%; }
+
+.fullwidth, .full-width,
+.tofull .responsive,
+.responsive.full, .responsive.fullwidth, .responsive.full-width,
+.full, .content-full > *, .all-full * {
+  width: 100%;
+  margin: 0; }
+
+*[data-column] {
+  padding: 10px;
+  margin: 0;
+  float: left;
+  clear: none;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%; }
+
+*[data-column-width="11"] {
+  width: 100%; }
+
+.half-width, *[data-column-width="12"] {
+  width: 50%; }
+
+.third-width, *[data-column-width="13"] {
+  width: 33.33%; }
+
+.two-third-width, *[data-column-width="23"] {
+  width: 66.66%; }
+
+*[data-column-width="14"] {
+  width: 25%; }
+
+*[data-column-width="34"] {
+  width: 75%; }
+
+*[data-column-width="15"] {
+  width: 20%; }
+
+*[data-column-width="25"] {
+  width: 40%; }
+
+*[data-column-width="35"] {
+  width: 60%; }
+
+*[data-column-width="45"] {
+  width: 80%; }
+
+*[data-column-width="16"] {
+  width: 16.66%; }
+
+*[data-column-width="56"] {
+  width: 83.34%; }
+
+*[data-column-width="17"] {
+  width: 14.28%; }
+
+*[data-column-width="18"] {
+  width: 12.5%; }
+
+*[data-column-width="19"] {
+  width: 11.11%; }
+
+*[data-column="auto"] {
+  width: auto; }
+
+*[data-column].overlay, *[data-column].underlay,
+*[data-column] + *:not([data-column]),
+*:not([data-column]) + *[data-column] {
+  clear: both; }
+
+*[data-column="solo"] {
+  float: none;
+  clear: both;
+  padding: 10px 0; }
+
+*[data-column="solo"].first {
+  padding-top: 0; }
+
+*[data-column="solo"].last {
+  padding-bottom: 0; }
+
+*[data-column="first"] {
+  clear: both; }
+
+*[data-column="first"]:before,
+.row:before,
+.first:before {
+  clear: both; }
+
+*[data-column="last"]:after,
+.row:after,
+.last:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  height: 0; }
+
+/*--------------------------------------------------------------
+Classes Shapes
+--------------------------------------------------------------*/
+.square {
+  border-radius: 0 !important; }
+
+.rounded {
+  border-radius: .6em !important; }
+
+.rounded-min {
+  border-radius: .2em !important; }
+
+.rounded-small {
+  border-radius: .4em !important; }
+
+.rounded-medium {
+  border-radius: .6em !important; }
+
+.rounded-big {
+  border-radius: 1em !important; }
+
+.rounded-max {
+  border-radius: 1.5em !important; }
+
+.circle,
+.circle-medium,
+.circle-big,
+.circle-max {
+  border-radius: 50% !important; }
+
+.circle-min {
+  border-radius: 20% !important; }
+
+.circle-small {
+  border-radius: 35% !important; }
+
+.round-top {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important; }
+
+.round-bottom {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important; }
+
+.round-left {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important; }
+
+.round-right {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important; }
+
+.round-head,
+.round-head-left {
+  border-bottom-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important; }
+
+.round-head-right {
+  border-top-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important; }
+
+.round-foot,
+.round-foot-left {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important; }
+
+.round-foot-right {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important; }
+
+.round-leaf,
+.round-leaf-left {
+  border-bottom-left-radius: 0 !important;
+  border-top-right-radius: 0 !important; }
+
+.round-leaf-right {
+  border-top-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important; }
+
+.round-petal,
+.round-petal-left {
+  border-bottom-left-radius: 0 !important; }
+
+.round-petal-right {
+  border-bottom-right-radius: 0 !important; }
+
+.round-drop,
+.round-drop-left {
+  border-top-left-radius: 0 !important; }
+
+.round-drop-right {
+  border-top-right-radius: 0 !important; }
+
+/*--------------------------------------------------------------
+Classes UI
 --------------------------------------------------------------*/
 .scm-ui {
   /*width: auto;*/
@@ -541,555 +1089,6 @@ input#login-show-forgot:checked + form + form {
 
 input#login-show-forgot:checked + form {
   display: flex; }
-
-/*--------------------------------------------------------------
-2.0 Classes
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-Classes Typography
---------------------------------------------------------------*/
-.min,
-.text-min,
-.minion,
-.text-minion {
-  font-size: 60%; }
-
-.half,
-.text-half {
-  font-size: 75%; }
-
-.small,
-.text-small {
-  font-size: 85%;
-  line-height: 150%; }
-
-.normal,
-.text-normal {
-  font-size: 100%; }
-
-.medium,
-.text-medium {
-  font-size: 125%; }
-
-.big,
-.text-big {
-  font-size: 150%; }
-
-.huge,
-.text-huge {
-  font-size: 180%; }
-
-.max,
-.text-max,
-.double,
-.text-double {
-  font-size: 200%; }
-
-.triple,
-.text-triple {
-  font-size: 300%; }
-
-.quadruple,
-.text-quadruple {
-  font-size: 400%; }
-
-.left, .textleft, .text-left,
-.content-left > *, .all-left * {
-  text-align: left; }
-
-.right, .textright, .text-right,
-.content-right > *, .all-right * {
-  text-align: right; }
-
-.center, .textcenter, .text-center,
-.content-center > *, .all-center * {
-  text-align: center; }
-
-.justify, .textjustify, .text-justify,
-.content-justify > *, .all-justify * {
-  text-align: justify; }
-
-/*--------------------------------------------------------------
-Classes Links
---------------------------------------------------------------*/
-.disabled,
-.disabled *:not(.enabled) {
-  pointer-events: none; }
-
-.enabled,
-.disabled .enabled *:not(.disabled) {
-  pointer-events: auto; }
-
-.pointer, .pointer * {
-  cursor: pointer; }
-
-.no-pointer, .no-pointer * {
-  cursor: default; }
-
-/*--------------------------------------------------------------
-Classes Images
---------------------------------------------------------------*/
-.image-banner,
-.mask {
-  display: inline-block;
-  overflow: hidden;
-  position: relative;
-  width: 100%; }
-
-.image-banner img,
-.mask img {
-  max-width: initial;
-  max-height: initial;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  position: absolute;
-  margin: auto;
-  left: -9999px;
-  right: -9999px;
-  top: 0%; }
-
-.image-banner img.landscape,
-.mask img.landscape {
-  min-height: 100%; }
-
-.image-banner img.portrait,
-.mask img.portrait {
-  min-width: 100%; }
-
-.image-banner.-middle img,
-.mask.-middle img {
-  top: -100%;
-  bottom: -100%; }
-
-.image-banner.-bottom img,
-.mask.-bottom img {
-  top: initial;
-  bottom: 0%; }
-
-.tofull .image-banner img,
-.tofull .mask img {
-  min-height: 100%;
-  max-width: initial;
-  width: auto;
-  left: -100%;
-  right: -100%; }
-
-.image-banner span,
-.mask span {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-  color: #FFF;
-  padding: 1em;
-  text-align: left;
-  vertical-align: middle;
-  display: inline-flex;
-  align-items: center; }
-
-.pixelated {
-  image-rendering: pixelated; }
-
-/*--------------------------------------------------------------
-Classes Display
---------------------------------------------------------------*/
-.hidden, .invisible, .none, .displaynone, .display-none {
-  display: none !important; }
-
-.block, .displayblock, .display-block {
-  display: block; }
-
-.inlineblock, .displayinlineblock, .display-inline-block, [data-switch] {
-  display: inline-block;
-  vertical-align: top; }
-
-.inline, .displayinline, .display-inline {
-  display: inline; }
-
-.-column {
-  display: flex;
-  flex-direction: column !important; }
-
-.-row {
-  display: flex;
-  flex-direction: row !important; }
-
-.-wrap {
-  display: flex;
-  flex-wrap: wrap !important; }
-
-.-nowrap {
-  display: flex;
-  flex-wrap: nowrap !important; }
-
-.-astart {
-  align-items: flex-start; }
-
-.-aend {
-  align-items: flex-end; }
-
-.-acenter {
-  align-items: center; }
-
-.-astretch {
-  align-items: stretch; }
-
-.-jstart {
-  justify-content: flex-start; }
-
-.-jend {
-  justify-content: flex-end; }
-
-.-jcenter {
-  justify-content: center; }
-
-.-jstretch {
-  justify-content: stretch; }
-
-.-jaround {
-  justify-content: space-around; }
-
-.-jbetween {
-  justify-content: space-between; }
-
-.-grow {
-  flex-grow: 1; }
-
-.-nogrow {
-  flex-grow: 0; }
-
-/*--------------------------------------------------------------
-Classes Position
---------------------------------------------------------------*/
-.affix, .fixed, .positionfixed, .position-fixed {
-  position: fixed !important; }
-
-.absolute, .positionabsolute, .position-absolute {
-  position: absolute !important; }
-
-.relative, .positionrelative, .position-relative {
-  position: relative !important; }
-
-.affix-bottom, .fixed-bottom, .positionfixed-bottom, .position-fixed-bottom,
-.absolute-bottom, .positionabsolute-bottom, .position-absolute-bottom,
-.relative-bottom, .positionrelative-bottom, .position-relative-bottom {
-  bottom: 0; }
-
-.affix-top, .fixed-top, .positionfixed-top, .position-fixed-top,
-.absolute-top, .positionabsolute-top, .position-absolute-top,
-.relative-top, .positionrelative-top, .position-relative-top {
-  top: 0; }
-
-.affix-left, .fixed-left, .positionfixed-left, .position-fixed-left,
-.absolute-left, .positionabsolute-left, .position-absolute-left,
-.relative-left, .positionrelative-left, .position-relative-left {
-  left: 0; }
-
-.affix-right, .fixed-right, .positionfixed-right, .position-fixed-right,
-.absolute-right, .positionabsolute-right, .position-absolute-right,
-.relative-right, .positionrelative-right, .position-relative-right {
-  right: 0; }
-
-.fixed.middle {
-  top: 50%;
-  left: 50%;
-  margin: -.5em 0 0 -.5em; }
-
-.absolute.middle {
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0; }
-
-.overlay {
-  position: absolute !important;
-  z-index: 1;
-  left: inherit;
-  top: inherit; }
-
-.underlay {
-  position: absolute;
-  z-index: -1;
-  left: 0; }
-
-/*--------------------------------------------------------------
-Classes Floating
---------------------------------------------------------------*/
-.align-none, .alignnone, .float-none, .floatnone,
-.content-float-none > *, .all-float-none * {
-  float: none;
-  clear: both;
-  display: block !important; }
-
-.align-left, .alignleft, .float-left, .floatleft,
-.content-float-left > *, .all-float-left * {
-  float: left;
-  clear: none; }
-
-.align-right, .alignright, .float-right, .floatright,
-.content-float-right > *, .all-float-right * {
-  float: right;
-  clear: none; }
-
-.align-center, .aligncenter, .float-center, .floatcenter,
-.content-float-center > *, .all-float-center * {
-  clear: both;
-  margin: 0 auto;
-  display: block; }
-
-.clear-none {
-  clear: none !important; }
-
-.clearfix,
-.clear:before,
-.clear:after {
-  content: "";
-  display: table; }
-
-.clearfix,
-.clear:after {
-  clear: both; }
-
-/*--------------------------------------------------------------
-Classes Layout
---------------------------------------------------------------*/
-.prepend {
-  margin-right: .3em; }
-
-.append {
-  margin-left: .3em; }
-
-blockquote .append {
-  margin-left: .2em; }
-
-.scroll {
-  overflow-y: scroll !important; }
-
-.no-scroll {
-  overflow: hidden !important;
-  overflow-x: hidden !important;
-  overflow-y: hidden !important; }
-
-.no-pad {
-  padding: 0 !important; }
-
-.box,
-.layer {
-  position: absolute;
-  overflow: visible;
-  display: block;
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  vertical-align: top;
-  background: transparent;
-  pointer-events: none; }
-
-.fullheight, .full-height {
-  height: 100%; }
-
-.fullwidth, .full-width,
-.tofull .responsive,
-.responsive.full, .responsive.fullwidth, .responsive.full-width,
-.full, .content-full > *, .all-full * {
-  width: 100%;
-  margin: 0; }
-
-*[data-column] {
-  padding: 10px;
-  margin: 0;
-  float: left;
-  clear: none;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 100%; }
-
-*[data-column-width="11"] {
-  width: 100%; }
-
-.half-width, *[data-column-width="12"] {
-  width: 50%; }
-
-.third-width, *[data-column-width="13"] {
-  width: 33.33%; }
-
-.two-third-width, *[data-column-width="23"] {
-  width: 66.66%; }
-
-*[data-column-width="14"] {
-  width: 25%; }
-
-*[data-column-width="34"] {
-  width: 75%; }
-
-*[data-column-width="15"] {
-  width: 20%; }
-
-*[data-column-width="25"] {
-  width: 40%; }
-
-*[data-column-width="35"] {
-  width: 60%; }
-
-*[data-column-width="45"] {
-  width: 80%; }
-
-*[data-column-width="16"] {
-  width: 16.66%; }
-
-*[data-column-width="56"] {
-  width: 83.34%; }
-
-*[data-column-width="17"] {
-  width: 14.28%; }
-
-*[data-column-width="18"] {
-  width: 12.5%; }
-
-*[data-column-width="19"] {
-  width: 11.11%; }
-
-*[data-column="auto"] {
-  width: auto; }
-
-*[data-column].overlay, *[data-column].underlay,
-*[data-column] + *:not([data-column]),
-*:not([data-column]) + *[data-column] {
-  clear: both; }
-
-*[data-column="solo"] {
-  float: none;
-  clear: both;
-  padding: 10px 0; }
-
-*[data-column="solo"].first {
-  padding-top: 0; }
-
-*[data-column="solo"].last {
-  padding-bottom: 0; }
-
-*[data-column="first"] {
-  clear: both; }
-
-*[data-column="first"]:before,
-.row:before,
-.first:before {
-  clear: both; }
-
-*[data-column="last"]:after,
-.row:after,
-.last:after {
-  clear: both;
-  content: ' ';
-  display: block;
-  height: 0; }
-
-/*--------------------------------------------------------------
-Classes Shapes
---------------------------------------------------------------*/
-.square {
-  border-radius: 0 !important; }
-
-.rounded {
-  border-radius: .6em !important; }
-
-.rounded-min {
-  border-radius: .2em !important; }
-
-.rounded-small {
-  border-radius: .4em !important; }
-
-.rounded-medium {
-  border-radius: .6em !important; }
-
-.rounded-big {
-  border-radius: 1em !important; }
-
-.rounded-max {
-  border-radius: 1.5em !important; }
-
-.circle,
-.circle-medium,
-.circle-big,
-.circle-max {
-  border-radius: 50% !important; }
-
-.circle-min {
-  border-radius: 20% !important; }
-
-.circle-small {
-  border-radius: 35% !important; }
-
-.round-top {
-  border-bottom-left-radius: 0 !important;
-  border-bottom-right-radius: 0 !important; }
-
-.round-bottom {
-  border-top-left-radius: 0 !important;
-  border-top-right-radius: 0 !important; }
-
-.round-left {
-  border-top-right-radius: 0 !important;
-  border-bottom-right-radius: 0 !important; }
-
-.round-right {
-  border-top-left-radius: 0 !important;
-  border-bottom-left-radius: 0 !important; }
-
-.round-head,
-.round-head-left {
-  border-bottom-left-radius: 0 !important;
-  border-top-right-radius: 0 !important;
-  border-bottom-right-radius: 0 !important; }
-
-.round-head-right {
-  border-top-left-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
-  border-bottom-left-radius: 0 !important; }
-
-.round-foot,
-.round-foot-left {
-  border-top-left-radius: 0 !important;
-  border-top-right-radius: 0 !important;
-  border-bottom-right-radius: 0 !important; }
-
-.round-foot-right {
-  border-top-left-radius: 0 !important;
-  border-top-right-radius: 0 !important;
-  border-bottom-left-radius: 0 !important; }
-
-.round-leaf,
-.round-leaf-left {
-  border-bottom-left-radius: 0 !important;
-  border-top-right-radius: 0 !important; }
-
-.round-leaf-right {
-  border-top-left-radius: 0 !important;
-  border-bottom-right-radius: 0 !important; }
-
-.round-petal,
-.round-petal-left {
-  border-bottom-left-radius: 0 !important; }
-
-.round-petal-right {
-  border-bottom-right-radius: 0 !important; }
-
-.round-drop,
-.round-drop-left {
-  border-top-left-radius: 0 !important; }
-
-.round-drop-right {
-  border-top-right-radius: 0 !important; }
 
 /*--------------------------------------------------------------
 Classes Colors
