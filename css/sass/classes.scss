@@ -1,0 +1,2379 @@
+/*
+Version:			v1.0.0
+License: 			GNU General Public License v2 or later
+License URI: 		http://www.gnu.org/licenses/gpl-2.0.html
+Description:		Classes CSS
+Author:				Studio Creativo M di Francesco Mazzola
+Text Domain:		scm
+GitHub Theme URI:	MdMbunny/classes
+GitHub Branch:		master
+Contact: 			http://www.studiocreativo-m.it
+*/
+
+html{
+	font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, Helvetica, Arial, san-serif;
+}
+button:not(.disabled){
+	cursor: pointer;
+}
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+0.0 Styleguide
+1.0 Classes
+
+/*--------------------------------------------------------------
+0.0 Styleguide
+--------------------------------------------------------------*/
+.sg h6{
+	margin: 0 0 5px 0;
+}
+.sg button{
+	font-size: 2em;
+}
+.sg{
+	position: relative;
+    box-sizing: border-box;
+    float: none;
+    border: 1px dashed #000;
+    clear: both;
+    height: 100%;
+    padding: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    display: inline-block;
+}
+.sg + .sg{
+	margin-top: 10px;
+}
+.sg > div{
+	background-color: #FFF;
+	box-sizing: border-box;
+	border:1px solid #000;
+	padding: 5px;
+}
+.sg-flex,
+.sg-scroll,
+.sg-full,
+.sg-pointer-events,
+.sg-cursor{
+	width: 250px;
+	margin-right: 5px;
+}
+
+.sg-size{
+	width: 100%;
+}
+.sg-alignment{
+	display: block;
+	width:300px;
+}
+.sg-mask{
+	width: 100%;
+}
+.sg-mask > div{
+	height: 200px;
+}
+.sg-mask > div > img{
+	width: 100%;
+}
+.sg-pixelated > img{
+	height:auto;
+	width:200px;
+}
+.sg-display{
+	width: 100%;
+	min-height: 50px;
+}
+.sg-display > div{
+	text-align: center;
+	margin: 5px;
+	width: 250px;
+}
+.sg-flex > div > div{
+	height:50px;
+	width:50px;
+	background-color:#000;
+	margin:5px;
+}
+.sg-flex > .-astretch > div{
+	min-width: 50px;
+	width: auto;
+}
+.sg-flex > .-jstretch > div{
+	min-width: 50px;
+	width: auto;
+	flex-grow: 1;
+}
+.sg-lay{
+	z-index: 10;
+	height:75px;
+}
+.sg-lay > .sg{
+	width:150px;
+	height:50px;
+	margin-left:100px;
+}
+.sg-lay > div:not(.sg){
+	width:240px;
+	bottom:5px;
+	left:5px;
+	text-align: left;
+}
+.sg-float{
+	width: 100%;
+}
+.sg-float > div{
+	width:50px;
+	height:50px;
+}
+.sg-pend > div{
+	display:inline-block;
+	background-color:#000;
+	text-align: center;
+}
+.sg-no-pad,
+.sg-box{
+	width:500px;
+}
+.sg-scroll > div,
+.sg-box{
+	height: 50px;
+}
+.sg-box > div{
+	text-align: center;
+}
+.sg-full{
+	height: 250px;
+}
+.sg-full > div{
+	display: inline-block;
+	text-align: center;
+}
+.sg-columns,
+.sg-shapes{
+	display: flex;
+	flex-flow: row wrap;
+}
+.sg-columns > div{
+	text-align: center;
+}
+.sg-shapes > div{
+	display:inline-flex;
+	align-items:center;
+	justify-content:center;
+	margin:5px;
+	width:150px;
+	height:150px;
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+1.0 Classes
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+Classes Typography
+--------------------------------------------------------------*/
+
+// Typography
+//
+// Weight: 10
+//
+// Styleguide Classes.typography
+
+// Text Size
+//
+// Weight: 10
+//
+// <code>[ .minion | .text-minion | .min | .text-min ] -> 60%</code><br>
+// <code>[ .half | .text-half ] -> 75%</code><br>
+// <code>[ .small | .text-small ] -> 85%</code><br>
+// <code>[ .normal | .text-normal ] -> 100%</code><br>
+// <code>[ .medium | .text-medium ] -> 125%</code><br>
+// <code>[ .big | .text-big ] -> 150%</code><br>
+// <code>[ .huge | .text-huge ] -> 180%</code><br>
+// <code>[ .double | .text-double | .max | .text-max ] -> 200%</code><br>
+// <code>[ .triple | .text-triple ] -> 300%</code><br>
+// <code>[ .quadruple | .text-quadruple ] -> 400%</code><br>
+//
+// Markup:
+// <div class="sg sg-size">
+// 	<span class="minion">Minion</span>
+// </div>
+// <div class="sg sg-size">
+// 	<span class="half">Half</span>
+// </div>
+// <div class="sg sg-size">
+// 	<span class="half">Small</span>
+// </div>
+// <div class="sg sg-size">
+// 	<span class="normal">Normal</span>
+// </div>
+// <div class="sg sg-size">
+// 	<span class="medium">Medium</span>
+// </div>
+// <div class="sg sg-size">
+// 	<span class="big">Big</span>
+// </div>
+// <div class="sg sg-size">
+// 	<span class="huge">Huge</span>
+// </div>
+// <div class="sg sg-size">
+// 	<span class="double">Double</span>
+// </div>
+// <div class="sg sg-size">
+// 	<span class="triple">Triple</span>
+// </div>
+// <div class="sg sg-size">
+// 	<span class="quadruple">Quadruple</span>
+// </div>
+//
+// Styleguide Classes.typography.size
+
+.min,
+.text-min,
+.minion,
+.text-minion{
+	font-size: 60%;
+}
+.half,
+.text-half{
+	font-size: 75%;
+}
+.small,
+.text-small{
+	font-size: 85%;
+	line-height: 150%;
+}
+.normal,
+.text-normal{
+	font-size: 100%;
+}
+.medium,
+.text-medium{
+	font-size: 125%;
+}
+.big,
+.text-big{
+	font-size: 150%;
+}
+.huge,
+.text-huge{
+	font-size: 180%;
+}
+.max,
+.text-max,
+.double,
+.text-double{
+	font-size: 200%;
+}
+.triple,
+.text-triple{
+	font-size: 300%;
+}
+.quadruple,
+.text-quadruple{
+	font-size: 400%;
+}
+
+// Alignment
+//
+// Weight: 20
+//
+// <code>[ .left | .textleft | .text-left | .content-left > * | .all-left * ]</code><br>
+// <code>[ .right | .textright | .text-right | .content-right > * | .all-right * ]</code><br>
+// <code>[ .center | .textcenter | .text-center | .content-center > * | .all-center * ]</code><br>
+// <code>[ .justify | .textjustify | .text-justify | .content-justify > * | .all-justify * ]</code>
+//
+// Markup:
+// <div class="sg sg-alignment">
+// 	<h6>Align Left</h6>
+// 	<div class="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+// </div>
+// <div class="sg sg-alignment">
+// 	<h6>Align Right</h6>
+// 	<div class="right">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+// </div>
+// <div class="sg sg-alignment">
+// 	<h6>Align Center</h6>
+// 	<div class="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+// </div>
+// <div class="sg sg-alignment">
+// 	<h6>Align Justify</h6>
+// 	<div class="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+// </div>
+//
+// Styleguide Classes.typography.alignment
+
+.left, .textleft, .text-left,
+.content-left > *, .all-left *{
+	text-align: left;
+}
+.right, .textright, .text-right,
+.content-right > *, .all-right *{
+	text-align: right;
+}
+.center, .textcenter, .text-center,
+.content-center > *, .all-center *{
+	text-align: center;
+}
+.justify, .textjustify, .text-justify,
+.content-justify > *, .all-justify *{
+	text-align: justify;
+}
+
+/*--------------------------------------------------------------
+Classes Links
+--------------------------------------------------------------*/
+
+// Links
+//
+// Weight: 20
+//
+// Styleguide Classes.links
+
+// Pointer Events
+//
+// Weight: 10
+//
+// <code>[ .disabled ]</code><br>
+// <code>[ .enabled ]</code>
+//
+// Markup:
+// <div class="sg sg-pointer-events">
+// 	<h6>Disabled</h6>
+// 	<button class="disabled">BUTTON</button>
+// </div>
+// <div class="sg sg-pointer-events">
+// 	<h6>Enabled</h6>
+// 	<button class="enabled">BUTTON</button>
+// </div>
+//
+// Styleguide Classes.links.pointerevents
+
+.disabled,
+.disabled *:not(.enabled){
+	pointer-events: none;
+}
+.enabled,
+.disabled .enabled *:not(.disabled){
+	pointer-events: auto;
+}
+
+// Cursor
+//
+// Weight: 20
+//
+// <code>[ .pointer | .pointer * ]</code><br>
+// <code>[ .no-pointer | .no-pointer * ]</code>
+//
+// Markup:
+// <div class="sg sg-cursor">
+// 	<div class="pointer" style="border:1px solid #000;padding:5px">Cursor Pointer</div>
+// </div>
+// <div class="sg sg-cursor">
+// 	<div class="no-pointer" style="border:1px solid #000;padding:5px">Cursor Default</div>
+// </div>
+//
+// Styleguide Classes.links.cursor
+
+.pointer, .pointer *{
+	cursor: pointer;
+}
+.no-pointer, .no-pointer *{
+	cursor: default;
+}
+
+/*--------------------------------------------------------------
+Classes Images
+--------------------------------------------------------------*/
+
+// Images
+//
+// Weight: 30
+//
+// Styleguide Classes.images
+
+// Mask
+//
+// Weight: 10
+//
+// <code>[ .mask | .image-banner ]</code><br>
+// <code>[ .mask.-middle | .image-banner.-middle ]</code><br>
+// <code>[ .mask.-bottom | .image-banner.-bottom ]</code><br>
+// <code>[ .mask span | .image-banner span ]</code>
+//
+// Markup:
+// <div class="sg sg-mask">
+// 	<h6>Mask Top</h6>
+// 	<div class="mask"><img src="../../img/example.jpg"></div>
+// </div>
+// <div class="sg sg-mask">
+// 	<h6>Mask Middle</h6>
+// 	<div class="mask -middle"><img src="../../img/example.jpg"></div>
+// </div>
+// <div class="sg sg-mask">
+// 	<h6>Mask Bottom</h6>
+// 	<div class="mask -bottom"><img src="../../img/example.jpg"></div>
+// </div>
+// <div class="sg sg-mask">
+// 	<h6>Mask Span</h6>
+// 	<div class="mask"><img src="../../img/example.jpg"><span>Text Over Masked Image</span></div>
+// </div>
+//
+// Styleguide Classes.images.mask
+
+.image-banner,
+.mask{
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.image-banner img,
+.mask img{
+	max-width: initial;
+    max-height: initial;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    margin: auto;
+    left: -9999px;
+    right: -9999px;
+    top: 0%;
+}
+.image-banner img.landscape,
+.mask img.landscape{
+    min-height: 100%;
+}
+.image-banner img.portrait,
+.mask img.portrait{
+    min-width: 100%;
+}
+.image-banner.-middle img,
+.mask.-middle img{
+	top: -100%;
+    bottom: -100%;
+}
+.image-banner.-bottom img,
+.mask.-bottom img{
+	top: initial;
+    bottom: 0%;
+}
+.tofull .image-banner img,
+.tofull .mask img{
+    min-height: 100%;
+    max-width: initial;
+    width: auto;
+    left: -100%;
+    right: -100%;
+}
+.image-banner span,
+.mask span{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,.9);
+	color: #FFF;
+	padding: 1em;
+	text-align: left;
+	vertical-align: middle;
+	display: inline-flex;
+  	align-items: center;
+}
+
+// Pixelated
+//
+// Weight: 20
+//
+// <code>[ .pixelated ]</code>
+//
+// Markup:
+// <div class="sg sg-pixelated">
+// 	<h6>Not Pixelated</h6>
+// 	<img src="../../img/example.jpg">
+// </div>
+// <div class="sg sg-pixelated">
+// 	<h6>Pixelated</h6>
+// 	<img class="pixelated" src="../../img/example.jpg">
+// </div>
+//
+// Styleguide Classes.images.pixelated
+
+.pixelated{
+	image-rendering: pixelated;
+}
+
+/*--------------------------------------------------------------
+Classes Display
+--------------------------------------------------------------*/
+
+// Display
+//
+// Weight: 40
+//
+// Styleguide Classes.display
+
+// Hidden
+//
+// Weight: 10
+//
+// Hidden element.<br>
+// <code>[ .hidden | .invisible | .none | .displaynone | .display-none ]</code>
+//
+// Markup:
+// <div class="sg sg-display">
+// 	<div class="hidden">Display Hidden</div>
+// </div>
+//
+// Styleguide Classes.display.hidden
+
+.hidden, .invisible, .none, .displaynone, .display-none{ display: none !important; }
+
+// Block
+//
+// Weight: 20
+//
+// Block element.<br>
+// <code>[ .block | .displayblock | .display-block ]</code>
+//
+// Markup:
+// <div class="sg sg-display">
+// 	<div class="block">Display Block</div>
+// 	<div class="block">Display Block</div>
+// </div>
+//
+// Styleguide Classes.display.block
+
+.block, .displayblock, .display-block{ display: block; }
+
+// Inline Block
+//
+// Weight: 30
+//
+// Inline Block element.<br>
+// <code>[ .inlineblock | .displayinlineblock | .display-inline-block | [data-switch] ]</code>
+//
+// Markup:
+// <div class="sg sg-display">
+// 	<div class="inlineblock">Display Inline Block</div>
+// 	<div class="inlineblock">Display Inline Block</div>
+// </div>
+//
+// Styleguide Classes.display.inlineblock
+
+.inlineblock, .displayinlineblock, .display-inline-block, [data-switch]{ display: inline-block; vertical-align: top; }
+
+// Inline
+//
+// Weight: 40
+//
+// Inline element.<br>
+// <code>[ .inline | .displayinline | .display-inline ]</code>
+//
+// Markup:
+// <div class="sg sg-display">
+// 	<div class="inline">Display Inline</div>
+// 	<div class="inline">Display Inline</div>
+// </div>
+//
+// Styleguide Classes.display.inline
+
+.inline, .displayinline, .display-inline{ display: inline; }
+
+// Flex
+//
+// Weight: 50
+//
+// Styleguide Classes.display.flex
+
+// Flex Column
+//
+// Weight: 10
+//
+// Flex Column element.<br>
+// <code>[ .-column ]</code>
+//
+// Markup:
+// <div class="sg sg-flex">
+// 	<div class="-column">
+// 		<div></div>
+// 		<div></div>
+// 		<div></div>
+// 	</div>
+// </div>
+//
+// Styleguide Classes.display.flex.column
+
+.-column{
+	display: flex;
+	flex-direction: column !important;
+}
+
+// Flex Row
+//
+// Weight: 20
+//
+// Flex Column element.<br>
+// <code>[ .-row ]</code>
+//
+// Markup:
+// <div class="sg sg-flex">
+// 	<div class="-row">
+// 		<div></div>
+// 		<div></div>
+// 		<div></div>
+// 	</div>
+// </div>
+//
+// Styleguide Classes.display.flex.row
+
+.-row{
+	display: flex;
+	flex-direction: row !important;
+}
+
+// Flex Wrap
+//
+// Weight: 30
+//
+// Flex Wrap element.<br>
+// <code>[ .-wrap ]</code>
+//
+// Markup:
+// <div class="sg sg-flex">
+// 	<div class="-wrap">
+// 		<div></div>
+// 		<div></div>
+// 		<div></div>
+// 		<div></div>
+// 		<div></div>
+// 	</div>
+// </div>
+//
+// Styleguide Classes.display.flex.wrap
+
+.-wrap{
+	display: flex;
+	flex-wrap: wrap !important;
+}
+
+// Flex No Wrap
+//
+// Weight: 40
+//
+// Flex No Wrap element.<br>
+// <code>[ .-nowrap ]</code>
+//
+// Markup:
+// <div class="sg sg-flex">
+// 	<div class="-nowrap">
+// 		<div></div>
+// 		<div></div>
+// 		<div></div>
+// 		<div></div>
+// 		<div></div>
+// 	</div>
+// </div>
+//
+// Styleguide Classes.display.flex.nowrap
+
+.-nowrap{
+	display: flex;
+	flex-wrap: nowrap !important;
+}
+
+// Flex Align Flex Start
+//
+// Weight: 50
+//
+// Flex Align Flex Start element.<br>
+// <code>[ .-astart ]</code>
+//
+// Markup:
+// <div class="sg sg-flex">
+// 	<div class="-column -astart">
+// 		<div></div>
+// 		<div></div>
+// 		<div></div>
+// 	</div>
+// </div>
+//
+// Styleguide Classes.display.flex.astart
+
+.-astart{
+	align-items: flex-start !important;
+}
+
+// Flex Align Flex End
+//
+// Weight: 60
+//
+// Flex Align Flex End element.<br>
+// <code>[ .-aend ]</code>
+//
+// Markup:
+// <div class="sg sg-flex">
+// 	<div class="-column -aend">
+// 		<div></div>
+// 		<div></div>
+// 		<div></div>
+// 	</div>
+// </div>
+//
+// Styleguide Classes.display.flex.aend
+
+.-aend{
+	align-items: flex-end !important;
+}
+
+// Flex Align Center
+//
+// Weight: 70
+//
+// Flex Align Flex Center element.<br>
+// <code>[ .-acenter ]</code>
+//
+// Markup:
+// <div class="sg sg-flex">
+// 	<div class="-column -acenter">
+// 		<div></div>
+// 		<div></div>
+// 		<div></div>
+// 	</div>
+// </div>
+//
+// Styleguide Classes.display.flex.acenter
+
+.-acenter{
+	align-items: center !important;
+}
+
+// Flex Align Stretch
+//
+// Weight: 80
+//
+// Flex Align Flex Stretch element.<br>
+// <code>[ .-astretch ]</code>
+//
+// Markup:
+// <div class="sg sg-flex">
+// 	<div class="-column -astretch">
+// 		<div></div>
+// 		<div></div>
+// 		<div></div>
+// 	</div>
+// </div>
+//
+// Styleguide Classes.display.flex.astretch
+
+.-astretch{
+	align-items: stretch !important;
+}
+
+// Flex Justify Flex Start
+//
+// Weight: 90
+//
+// Flex Justify Flex Start element.<br>
+// <code>[ .-jstart ]</code>
+//
+// Markup:
+// <div class="sg sg-flex">
+// 	<div class="-row -jstart">
+// 		<div></div>
+// 		<div></div>
+// 		<div></div>
+// 	</div>
+// </div>
+//
+// Styleguide Classes.display.flex.jstart
+
+.-jstart{
+	justify-content: flex-start !important;
+}
+
+// Flex Justify Flex End
+//
+// Weight: 100
+//
+// Flex Justify Flex End element.<br>
+// <code>[ .-jend ]</code>
+//
+// Markup:
+// <div class="sg sg-flex">
+// 	<div class="-row -jend">
+// 		<div></div>
+// 		<div></div>
+// 		<div></div>
+// 	</div>
+// </div>
+//
+// Styleguide Classes.display.flex.jend
+
+.-jend{
+	justify-content: flex-end !important;
+}
+
+// Flex Justify Center
+//
+// Weight: 110
+//
+// Flex Justify Center element.<br>
+// <code>[ .-jcenter ]</code>
+//
+// Markup:
+// <div class="sg sg-flex">
+// 	<div class="-row -jcenter">
+// 		<div></div>
+// 		<div></div>
+// 		<div></div>
+// 	</div>
+// </div>
+//
+// Styleguide Classes.display.flex.jcenter
+
+.-jcenter{
+	justify-content: center !important;
+}
+
+// Flex Justify Stretch
+//
+// Weight: 120
+//
+// Flex Justify Stretch element.<br>
+// <code>[ .-jstretch ]</code>
+//
+// Markup:
+// <div class="sg sg-flex">
+// 	<div class="-row -jstretch">
+// 		<div></div>
+// 		<div></div>
+// 		<div></div>
+// 	</div>
+// </div>
+//
+// Styleguide Classes.display.flex.jstretch
+
+.-jstretch{
+	justify-content: stretch !important;
+}
+
+// Flex Justify Space Around
+//
+// Weight: 130
+//
+// Flex Justify Space Around element.<br>
+// <code>[ .-jaround ]</code>
+//
+// Markup:
+// <div class="sg sg-flex">
+// 	<div class="-row -jaround">
+// 		<div></div>
+// 		<div></div>
+// 		<div></div>
+// 	</div>
+// </div>
+//
+// Styleguide Classes.display.flex.jaround
+
+.-jaround{
+	justify-content: space-around !important;
+}
+
+// Flex Justify Space Between
+//
+// Weight: 140
+//
+// Flex Justify Space Between element.<br>
+// <code>[ .-jbetween ]</code>
+//
+// Markup:
+// <div class="sg sg-flex">
+// 	<div class="-row -jbetween">
+// 		<div></div>
+// 		<div></div>
+// 		<div></div>
+// 	</div>
+// </div>
+//
+// Styleguide Classes.display.flex.jbetween
+
+.-jbetween{
+	justify-content: space-between !important;
+}
+
+// Flex Grow
+//
+// Weight: 150
+//
+// Flex Grow element.<br>
+// <code>[ .-grow ]</code>
+//
+// Markup:
+// <div class="sg sg-flex">
+// 	<div class="-row">
+// 		<div class="-grow"></div>
+// 		<div class="-grow"></div>
+// 		<div class="-grow"></div>
+// 	</div>
+// </div>
+//
+// Styleguide Classes.display.flex.grow
+
+.-grow{
+	flex-grow: 1;
+}
+
+// Flex No Grow
+//
+// Weight: 160
+//
+// Flex No Grow element.<br>
+// <code>[ .-grow ]</code>
+//
+// Markup:
+// <div class="sg sg-flex">
+// 	<div class="-row">
+// 		<div class="-nogrow"></div>
+// 		<div class="-nogrow"></div>
+// 		<div class="-nogrow"></div>
+// 	</div>
+// </div>
+//
+// Styleguide Classes.display.flex.nogrow
+
+.-nogrow{
+	flex-grow: 0;
+}
+
+/*--------------------------------------------------------------
+Classes Position
+--------------------------------------------------------------*/
+
+// Position
+//
+// Weight: 50
+//
+// Styleguide Classes.position
+
+// Fixed
+//
+// Weight: 10
+//
+// <code>[ .affix | .fixed | .positionfixed | .position-fixed ]</code>
+//
+// Styleguide Classes.position.affix
+
+.affix, .fixed, .positionfixed, .position-fixed{ position: fixed !important; }
+
+// Absolute
+//
+// Weight: 20
+//
+// <code>[ .absolute | .positionabsolute | .position-absolute ]</code>
+//
+// Styleguide Classes.position.absolute
+
+.absolute, .positionabsolute, .position-absolute{ position: absolute !important; }
+
+// Relative
+//
+// Weight: 30
+//
+// <code>[ .relative | .positionrelative | .position-relative ]</code>
+//
+// Styleguide Classes.position.relative
+
+.relative, .positionrelative, .position-relative{ position: relative !important; }
+
+// Bottom
+//
+// Weight: 40
+//
+// <code>[ .affix-bottom | .fixed-bottom | .positionfixed-bottom | .position-fixed-bottom | .absolute-bottom | .positionabsolute-bottom | .position-absolute-bottom | .relative-bottom | .positionrelative-bottom | .position-relative-bottom ]</code>
+//
+// Styleguide Classes.position.bottom
+
+.affix-bottom, .fixed-bottom, .positionfixed-bottom, .position-fixed-bottom,
+.absolute-bottom, .positionabsolute-bottom, .position-absolute-bottom,
+.relative-bottom, .positionrelative-bottom, .position-relative-bottom{
+	bottom: 0;
+}
+
+// Top
+//
+// Weight: 50
+//
+// <code>[ .affix-top | .fixed-top | .positionfixed-top | .position-fixed-top | .absolute-top | .positionabsolute-top | .position-absolute-top | .relative-top | .positionrelative-top | .position-relative-top ]</code>
+//
+// Styleguide Classes.position.top
+
+.affix-top, .fixed-top, .positionfixed-top, .position-fixed-top,
+.absolute-top, .positionabsolute-top, .position-absolute-top,
+.relative-top, .positionrelative-top, .position-relative-top{
+	top: 0;
+}
+
+// Left
+//
+// Weight: 60
+//
+// <code>[ .affix-left | .fixed-left | .positionfixed-left | .position-fixed-left | .absolute-left | .positionabsolute-left | .position-absolute-left | .relative-left | .positionrelative-left | .position-relative-left ]</code>
+//
+// Styleguide Classes.position.left
+
+.affix-left, .fixed-left, .positionfixed-left, .position-fixed-left,
+.absolute-left, .positionabsolute-left, .position-absolute-left,
+.relative-left, .positionrelative-left, .position-relative-left{
+	left: 0;
+}
+
+// Right
+//
+// Weight: 70
+//
+// <code>[ .affix-right | .fixed-right | .positionfixed-right | .position-fixed-right | .absolute-right | .positionabsolute-right | .position-absolute-right | .relative-right | .positionrelative-right | .position-relative-right ]</code>
+//
+// Styleguide Classes.position.right
+
+.affix-right, .fixed-right, .positionfixed-right, .position-fixed-right,
+.absolute-right, .positionabsolute-right, .position-absolute-right,
+.relative-right, .positionrelative-right, .position-relative-right{
+	right: 0;
+}
+
+// Middle
+//
+// Weight: 80
+//
+// <code>[ .fixed.middle | .absolute.middle ]</code>
+//
+// Styleguide Classes.position.middle
+
+.fixed.middle{
+	top: 50%;
+	left: 50%;
+	margin: -.5em 0 0 -.5em;
+}
+.absolute.middle{
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+
+// Overlay
+//
+// Weight: 90
+//
+// <code>[ .overlay ]</code>
+//
+// Markup:
+// <div class="sg sg-lay">
+// 	<div class="sg"></div>
+// 	<div class="overlay">Overlay</div>
+// </div>
+//
+// Styleguide Classes.position.overlay
+
+.overlay{
+	position: absolute !important;
+	z-index: 1;
+	left: inherit;
+	top: inherit;
+}
+
+// Underlay
+//
+// Weight: 100
+//
+// <code>[ .underlay ]</code>
+//
+// Markup:
+// <div class="sg sg-lay">
+// 	<div class="sg"></div>
+// 	<div class="underlay">Underlay</div>
+// </div>
+//
+// Styleguide Classes.position.underlay
+
+.underlay{
+	position: absolute;
+	z-index: -1;
+	left: 0;
+}
+
+/*--------------------------------------------------------------
+Classes Floating
+--------------------------------------------------------------*/
+
+// Floating
+//
+// Weight: 60
+//
+// Styleguide Classes.floating
+
+// Float None
+//
+// Weight: 10
+//
+// <code>[ .align-none | .alignnone | .float-none | .floatnone | .content-float-none > * | .all-float-none * ]</code>
+//
+// Markup:
+// <div class="sg sg-float">
+// 	<div class="align-none"></div>
+// 	<div class="align-none"></div>
+// </div>
+//
+// Styleguide Classes.floating.none
+
+.align-none, .alignnone, .float-none, .floatnone,
+.content-float-none > *, .all-float-none *{
+	float: none;
+	clear: both;
+	display: block !important;
+}
+
+// Float Left
+//
+// Weight: 20
+//
+// <code>[ .align-left | .alignleft | .float-left | .floatleft | .content-float-left > * | .all-float-left * ]</code>
+//
+// Markup:
+// <div class="sg sg-float">
+// 	<div class="align-left"></div>
+// 	<div class="align-left"></div>
+// </div>
+//
+// Styleguide Classes.floating.left
+
+.align-left, .alignleft, .float-left, .floatleft,
+.content-float-left > *, .all-float-left *{
+	float: left;
+	clear: none;
+}
+
+// Float Right
+//
+// Weight: 30
+//
+// <code>[ .align-right | .alignright | .float-right | .floatright | .content-float-right > * | .all-float-right * ]</code>
+//
+// Markup:
+// <div class="sg sg-float">
+// 	<div class="align-right"></div>
+// 	<div class="align-right"></div>
+// </div>
+//
+// Styleguide Classes.floating.right
+
+.align-right, .alignright, .float-right, .floatright,
+.content-float-right > *, .all-float-right *{
+	float: right;
+	clear: none;
+}
+
+// Float Center
+//
+// Weight: 40
+//
+// <code>[ .align-center | .aligncenter | .float-center | .floatcenter | .content-float-center > * | .all-float-center * ]</code>
+//
+// Markup:
+// <div class="sg sg-float">
+// 	<div class="align-center"></div>
+// 	<div class="align-center"></div>
+// </div>
+//
+// Styleguide Classes.floating.center
+
+.align-center, .aligncenter, .float-center, .floatcenter,
+.content-float-center > *, .all-float-center *{
+	clear: both;
+	margin: 0 auto;
+	display: block;
+}
+
+// Clear None
+//
+// Weight: 50
+//
+// <code>[ .clear-none ]</code>
+//
+// Markup:
+// 	<div class="sg sg-float">
+// 	<div class="align-left"></div>
+// 	<div class="align-left"></div>
+// 	<div class="align-left clear-none"></div>
+// 	<div class="align-left"></div>
+// </div>
+//
+// Styleguide Classes.floating.clearnone
+
+.clear-none{
+	clear: none !important;
+}
+
+// Clear
+//
+// Weight: 60
+//
+// <code>[ .clearfix | .clear:before | .clear:after ]</code>
+//
+// Markup:
+// 	<div class="sg sg-float">
+// 	<div class="align-left"></div>
+// 	<div class="align-left"></div>
+// 	<div class="align-left clearfix"></div>
+// 	<div class="align-left"></div>
+// </div>
+//
+// Styleguide Classes.floating.clear
+
+.clearfix,
+.clear:before,
+.clear:after{
+	content: "";
+	display: table;
+}
+.clearfix,
+.clear:after{
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+Classes Layout
+--------------------------------------------------------------*/
+
+// Layout
+//
+// Weight: 80
+//
+// Styleguide Classes.layout
+
+// Prepend
+//
+// Weight: 10
+//
+// Prepend.<br>
+// <code>[ .prepend ]</code>
+//
+// Markup:
+// <div class="sg sg-pend">
+// 	<div class="prepend">1</div>Prepended Element
+// </div>
+//
+// Styleguide Classes.layout.prepend
+
+.prepend{
+	margin-right: .3em;
+}
+
+// Append
+//
+// Weight: 20
+//
+// Append.<br>
+// <code>[ .append | blockquote .append ]</code>
+//
+// Markup:
+// <div class="sg sg-pend">
+// 	Appended Element<div class="append">1</div>
+// </div>
+//
+// Styleguide Classes.layout.append
+
+.append{
+	margin-left: .3em;
+}
+blockquote .append{
+	margin-left: .2em;
+}
+
+// No Scroll
+//
+// Weight: 30
+//
+// No Scroll.<br>
+// <code>[ .scroll ]</code><br>
+// <code>[ .no-scroll ]</code>
+//
+// Markup:
+// <div class="sg sg-scroll">
+// 	<h6>Scroll</h6>
+// 	<div class="scroll">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula, purus eu semper varius, ligula elit tincidunt tortor, eu porttitor elit mi at justo. Nulla luctus ex et nisi cursus malesuada. Nullam dui diam, cursus quis elit et, varius pharetra nunc. Quisque sollicitudin purus vitae consequat tristique.</div>
+// </div>
+// <div class="sg sg-scroll">
+// 	<h6>No Scroll</h6>
+// 	<div class="no-scroll">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula, purus eu semper varius, ligula elit tincidunt tortor, eu porttitor elit mi at justo. Nulla luctus ex et nisi cursus malesuada. Nullam dui diam, cursus quis elit et, varius pharetra nunc. Quisque sollicitudin purus vitae consequat tristique.</div>
+// </div>
+//
+// Styleguide Classes.layout.noscroll
+
+.scroll{
+	overflow-y: scroll !important;
+}
+.no-scroll{
+	overflow: hidden !important;
+	overflow-x: hidden !important;
+	overflow-y: hidden !important;
+}
+
+// No Padding
+//
+// Weight: 40
+//
+// <code>[ .no-pad ]</code>
+//
+// Markup:
+// <div class="sg sg-no-pad">
+// 	<div class="no-pad">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula, purus eu semper varius, ligula elit tincidunt tortor, eu porttitor elit mi at justo. Nulla luctus ex et nisi cursus malesuada. Nullam dui diam, cursus quis elit et, varius pharetra nunc. Quisque sollicitudin purus vitae consequat tristique.</div>
+// </div>
+//
+// Styleguide Classes.layout.nopadding
+
+.no-pad{
+	padding: 0 !important;
+}
+
+// Box
+//
+// Weight: 50
+//
+// <code>[ .box | .layer ]</code>
+//
+// Markup:
+// <div class="sg sg-box">
+// 	<div class="box">Box or Layer</div>
+// </div>
+//
+// Styleguide Classes.layout.box
+
+.box,
+.layer{
+	position: absolute;
+	overflow: visible;
+	display: block;
+	padding: 0;
+	margin: 0;
+	opacity: 1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	vertical-align: top;
+	background: transparent;
+	pointer-events: none;
+}
+
+// Full
+//
+// Weight: 60
+//
+// <code>[ .fullheight | .full-height ]</code><br>
+// <code>[ .fullwidth | .full-width | .full | .content-full > * | .all-full * ]</code>
+//
+// Markup:
+// <div class="sg sg-full">
+// 	<div class="fullheight">Full Height</div>
+// </div>
+// <div class="sg sg-full">
+// 	<div class="fullwidth">Full Width</div>
+// </div>
+//
+// Styleguide Classes.layout.full
+
+.fullheight, .full-height{
+	height: 100%;
+}
+.fullwidth, .full-width,
+.tofull .responsive,
+.responsive.full, .responsive.fullwidth, .responsive.full-width,
+.full, .content-full > *, .all-full *{
+	width: 100%;
+	margin: 0;
+}
+
+// Column
+//
+// Weight: 70
+//
+// <code>[ data-column ] -> [ solo | first | last | auto ]</code>
+// <code>[ data-column-width ] -> [ 11 | 12 | 13 | 23 | 14 | 34 | 15 | 25 | 35 | 45 | 16 | 56 | 17 | 18 | 19 ]</code>
+//
+// Markup:
+// <div class="sg sg-columns">
+// 	<div data-column="solo" data-column-width="11">1/1 Solo</div>
+// 	<div data-column="first" data-column-width="12">1/2 First</div>
+// 	<div data-column="last" data-column-width="12">1/2 Last</div>
+// 	<div data-column="first" data-column-width="23">2/3 First</div>
+// 	<div data-column="last" data-column-width="13">1/3 Last</div>
+// 	<div data-column="first" data-column-width="34">3/4 First</div>
+// 	<div data-column="last" data-column-width="14">1/4 Last</div>
+// 	<div data-column="first" data-column-width="15">1/5 First</div>
+// 	<div data-column="last" data-column-width="45">4/5 Last</div>
+// 	<div data-column="first" data-column-width="25">2/5 First</div>
+// 	<div data-column="last" data-column-width="35">3/5 Last</div>
+// 	<div data-column="first" data-column-width="16">1/6 First</div>
+// 	<div data-column="last" data-column-width="56">5/6 Last</div>
+// 	<div data-column="first" data-column-width="17">1/7 First</div>
+// 	<div data-column data-column-width="17">1/7</div>
+// 	<div data-column data-column-width="17">1/7</div>
+// 	<div data-column data-column-width="17">1/7</div>
+// 	<div data-column data-column-width="17">1/7</div>
+// 	<div data-column data-column-width="17">1/7</div>
+// 	<div data-column="last" data-column-width="17">1/7 Last</div>
+// 	<div data-column="first" data-column-width="18">1/8 First</div>
+// 	<div data-column data-column-width="34">3/4</div>
+// 	<div data-column="last" data-column-width="18">1/8 Last</div>
+// 	<div data-column="first" data-column-width="19">1/9 First</div>
+// 	<div data-column data-column-width="19">1/9</div>
+// 	<div data-column data-column-width="19">1/9</div>
+// 	<div data-column data-column-width="19">1/9</div>
+// 	<div data-column data-column-width="19">1/9</div>
+// 	<div data-column data-column-width="19">1/9</div>
+// 	<div data-column data-column-width="19">1/9</div>
+// 	<div data-column data-column-width="19">1/9</div>
+// 	<div data-column="last" data-column-width="19">1/9 Last</div>
+// 	<div data-column="auto">Auto</div>
+// </div>
+//
+// Styleguide Classes.layout.column
+
+*[data-column]{
+	padding: 10px;
+	margin: 0;
+	float: left;
+	clear: none;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+*[data-column-width="11"]{ width: 100%; }
+.half-width, *[data-column-width="12"]{ width: 50%; }
+.third-width, *[data-column-width="13"]{ width: 33.33%; }
+.two-third-width, *[data-column-width="23"]{ width: 66.66%; }
+*[data-column-width="14"]{ width: 25%; }
+*[data-column-width="34"]{ width: 75%; }
+*[data-column-width="15"]{ width: 20%; }
+*[data-column-width="25"]{ width: 40%; }
+*[data-column-width="35"]{ width: 60%; }
+*[data-column-width="45"]{ width: 80%; }
+*[data-column-width="16"]{ width: 16.66%; }
+*[data-column-width="56"]{ width: 83.34%; }
+*[data-column-width="17"]{ width: 14.28%; }
+*[data-column-width="18"]{ width: 12.5%; }
+*[data-column-width="19"]{ width: 11.11%; }
+
+*[data-column="auto"]{
+	width: auto;
+}
+*[data-column].overlay, *[data-column].underlay,
+*[data-column] + *:not( [data-column] ),
+*:not( [data-column] ) + *[data-column]{
+	clear: both;
+}
+*[data-column="solo"]{
+	float: none;
+	clear: both;
+	padding: 10px 0;
+}
+*[data-column="solo"].first{
+	padding-top: 0;
+}
+*[data-column="solo"].last{
+	padding-bottom: 0;
+}
+*[data-column="first"]{
+	clear: both;
+}
+*[data-column="first"]:before,
+.row:before,
+.first:before{
+	clear: both;
+}
+*[data-column="last"]:after,
+.row:after,
+.last:after{
+	clear: both;
+	content: ' ';
+	display: block;
+	height: 0;
+}
+
+/*--------------------------------------------------------------
+Classes Shapes
+--------------------------------------------------------------*/
+
+// Shapes
+//
+// Weight: 90
+//
+// Square.<br>
+// <code>[ .square ]</code><br>
+// <code>[ .rounded | .rounded-min | .rounded-small | .rounded-medium | .rounded-big | .rounded-max ]</code><br>
+// <code>[ .rounded .round-top | .rounded .round-bottom | .rounded .round-left | .rounded .round-right ]</code><br>
+// <code>[ .rounded .round-head-left | .rounded .round-head-right ]</code><br>
+// <code>[ .rounded .round-foot-left | .rounded .round-foot-right ]</code><br>
+// <code>[ .rounded .round-leaf-left | .rounded .round-leaf-right ]</code><br>
+// <code>[ .rounded .round-petal-left | .rounded .round-petal-right ]</code><br>
+// <code>[ .rounded .round-drop-left | .rounded .round-drop-right ]</code><br>
+// <code>[ .circle | .circle-min | .circle-small ]</code>
+//
+// Markup:
+// <div class="sg sg-shapes">
+// 	<div class="square">Square</div>
+// 	<div class="rounded">Rounded</div>
+// 	<div class="rounded-min">Rounded Min</div>
+// 	<div class="rounded-small">Rounded Small</div>
+// 	<div class="rounded-medium">Rounded Medium</div>
+// 	<div class="rounded-big">Rounded Big</div>
+// 	<div class="rounded-max">Rounded Max</div>
+// 	<div class="rounded round-top">Rounded Top</div>
+// 	<div class="rounded round-bottom">Rounded Bottom</div>
+// 	<div class="rounded round-left">Rounded Left</div>
+// 	<div class="rounded round-right">Rounded Right</div>
+// 	<div class="rounded round-head-left">Rounded Head Left</div>
+// 	<div class="rounded round-head-right">Rounded Head Right</div>
+// 	<div class="rounded round-foot-left">Rounded Foot Left</div>
+// 	<div class="rounded round-foot-right">Rounded Foot Right</div>
+// 	<div class="rounded round-leaf-left">Rounded Leaf Left</div>
+// 	<div class="rounded round-leaf-right">Rounded Leaf Right</div>
+// 	<div class="rounded round-petal-left">Rounded Petal Left</div>
+// 	<div class="rounded round-petal-right">Rounded Petal Right</div>
+// 	<div class="rounded round-drop-left">Rounded Drop Left</div>
+// 	<div class="rounded round-drop-right">Rounded Drop Right</div>
+// 	<div class="circle">Circle</div>
+// 	<div class="circle-min">Circle Min</div>
+// 	<div class="circle-small">Circle Small</div>
+// </div>
+//
+// Styleguide Classes.shapes
+
+.square{
+	border-radius: 0 !important;
+}
+.rounded{
+	border-radius: .6em !important;
+}
+.rounded-min{
+	border-radius: .2em !important;
+}
+.rounded-small{
+	border-radius: .4em !important;
+}
+.rounded-medium{
+	border-radius: .6em !important;
+}
+.rounded-big{
+	border-radius: 1em !important;
+}
+.rounded-max{
+	border-radius: 1.5em !important;
+}
+.circle,
+.circle-medium,
+.circle-big,
+.circle-max{
+	border-radius: 50% !important;
+}
+.circle-min{
+	border-radius: 20% !important;
+}
+.circle-small{
+	border-radius: 35% !important;
+}
+.round-top{
+	border-bottom-left-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+}
+.round-bottom{
+	border-top-left-radius: 0 !important;
+	border-top-right-radius: 0 !important;
+}
+.round-left{
+	border-top-right-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+}
+.round-right{
+	border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+}
+.round-head,
+.round-head-left{
+	border-bottom-left-radius: 0 !important;
+	border-top-right-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+}
+.round-head-right{
+	border-top-left-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+}
+.round-foot,
+.round-foot-left{
+	border-top-left-radius: 0 !important;
+	border-top-right-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+}
+.round-foot-right{
+	border-top-left-radius: 0 !important;
+	border-top-right-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+}
+.round-leaf,
+.round-leaf-left{
+	border-bottom-left-radius: 0 !important;
+	border-top-right-radius: 0 !important;
+}
+.round-leaf-right{
+	border-top-left-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+}
+.round-petal,
+.round-petal-left{
+	border-bottom-left-radius: 0 !important;
+}
+.round-petal-right{
+	border-bottom-right-radius: 0 !important;
+}
+.round-drop,
+.round-drop-left{
+	border-top-left-radius: 0 !important;
+}
+.round-drop-right{
+	border-top-right-radius: 0 !important;
+}
+
+/*--------------------------------------------------------------
+Classes UI
+--------------------------------------------------------------*/
+
+.scm-ui{
+	/*width: auto;*/
+	position: absolute;
+    z-index: 200;
+    pointer-events: none;
+    display: flex;
+    flex-flow: row wrap;
+    /*justify-content: space-between;*/
+    font-size: 16px;
+}
+.scm-ui.relative{
+	z-index: 1;
+}
+.scm-ui.-top{
+	top: 0;
+}
+.scm-ui.-top{
+	-webkit-transition-property: margin-top;
+    -webkit-transition-duration: .2s;
+    -webkit-transition-timing-function: ease;
+    -webkit-transition-delay: 0s;
+    transition-property: margin-top;
+    transition-duration: .2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+.scm-ui.-bottom{
+	bottom: 0;
+}
+.scm-ui.-bottom{
+    -webkit-transition-property: margin-bottom;
+    -webkit-transition-duration: .2s;
+    -webkit-transition-timing-function: ease;
+    -webkit-transition-delay: 0s;
+    transition-property: margin-bottom;
+    transition-duration: .2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+.scm-ui.-left{
+    left: 0;
+}
+.scm-ui.-right{
+    right: 0;
+}
+.scm-ui.-left50{
+    left: 50%;
+}
+.scm-ui.-right50{
+    right: 50%;
+}
+.scm-ui-content{
+	padding: .75em .75em .75em .75em;
+	width: 100%;
+	background-color: #000;
+	position: relative;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.scm-ui-content.disabled .scm-ui-label,
+.scm-ui-content.disabled .scm-ui-label *{
+	pointer-events: none !important;
+	cursor: default !important;
+}
+.scm-ui.text-left .scm-ui-content{
+	justify-content: flex-start;
+}
+.scm-ui.text-right .scm-ui-content{
+	justify-content: flex-end;
+	align-self: flex-end;
+}
+.scm-ui-content > *{
+	pointer-events: initial;
+}
+.scm-ui-content label:not(.scm-ui-button){
+	color: #FFF;
+	line-height: 3em;
+}
+.ui-sortable{
+	display: block;
+}
+
+/*--------------------------------------------------------------
+UI Labels
+--------------------------------------------------------------*/
+
+.scm-ui-label{
+    padding: 0 .5em;
+    border-radius: .5em;
+    border: 0;
+    /*background-color: #000;
+    color: #FFF;*/
+    font-size: 1em;
+    line-height: 1em;
+    font-weight: normal;
+    vertical-align: middle;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    height: 2.5em;
+    min-height: 2.5em;
+    min-width: 2.5em;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    margin: .25em;
+}
+.scm-ui-label.-vert{
+	width: 2em;
+	height: auto;
+	flex-flow: column nowrap;
+}
+.scm-ui-label.is-file{
+    border: 1px dashed #FFF;
+}
+.scm-ui-label.text .faicon{
+    margin-right: .5em;
+}
+
+/*--------------------------------------------------------------
+UI Buttons
+--------------------------------------------------------------*/
+
+.scm-ui-button{
+	-webkit-transition: all .2s;
+	transition: all .2s;
+	background-color: #FFF;
+	color: #000;
+	opacity: 1;
+}
+.scm-ui-toggle{
+	border: 1px dashed transparent;
+}
+.scm-ui-label.on{
+	border-style: solid;
+}
+.scm-ui-button,
+.scm-ui-button.color-it{
+	-webkit-transition: all .2s;
+	transition: all .2s;
+}
+.scm-ui-button.ui-sortable-handle{
+	-webkit-transition: none;
+	transition: none;
+}
+.scm-ui-toggle:not(.off):not(.color-it):not(.no-button):hover,
+.scm-ui-toggle:not(.off):not(.color-it):not(.no-button):active,
+.scm-ui-button:not(.color-it):hover,
+.scm-ui-button:not(.color-it):active,
+body.keyboard .scm-ui-button:not(.off):not(.color-it):focus,
+body.keyboard .scm-ui-button:not(.off):not(.color-it).focus{
+	background-color: #ddd;
+}
+.scm-ui-button.no-button:hover,
+.scm-ui-button.no-button:active,
+body.keyboard .scm-ui-button.no-button:focus,
+body.keyboard .scm-ui-button.no-button.focus,
+.scm-ui-button.color-it:not(.off):hover,
+.scm-ui-button.color-it:not(.off):active,
+body.keyboard .scm-ui-button.color-it:not(.off):focus,
+body.keyboard .scm-ui-button.color-it:not(.off).focus{
+	opacity: .8;
+}
+.scm-ui-label.on:not(.color-it):active{
+	background-color: #DDD;
+}
+.scm-ui-label.off:hover,
+.scm-ui-label.off:active,
+body.keyboard .scm-ui-label.off:focus,
+body.keyboard .scm-ui-label.off.focus{
+	border-style: solid;
+}
+.scm-ui-label.off:not(.color-it),
+.scm-ui-label.off:not(.color-it):focus,
+.scm-ui-label.off:not(.color-it).focus{
+	background-color: #000;
+	color: #FFF;
+	border-color: #FFF;
+}
+.scm-ui-label.off:not(.color-it):active{
+	border-color: #333;
+	background-color: #444;
+}
+.scm-ui-content .scm-ui-button.disabled{
+	background-color: #000;
+    color: #FFF;
+    border-color: transparent;
+	cursor: default;
+}
+.scm-ui-button .faicon + span{
+    margin-left: .5em;
+}
+
+/*--------------------------------------------------------------
+UI No Buttons
+--------------------------------------------------------------*/
+
+.scm-ui-button.no-button:active,
+.scm-ui-button.no-button:hover,
+.scm-ui-button.no-button:focus,
+.scm-ui-button.no-button.focus,
+.scm-ui-label.no-button{
+	border: 0;
+    padding: 0;
+    background-color: transparent;    
+}
+.scm-ui-label.no-button .faicon{
+	font-size: 2em;
+}
+
+/*--------------------------------------------------------------
+UI Composition
+--------------------------------------------------------------*/
+
+.scm-ui-content .scm-ui-comp{
+	padding: 0;
+	align-items: stretch;
+}
+.scm-ui-content .scm-ui-comp > *{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+.scm-ui-content .scm-ui-comp.save{
+	min-width: 8em;
+}
+.scm-ui-content .scm-ui-comp .faicon{
+	margin: 0 1em;
+}
+.scm-ui-content .scm-ui-comp .prepended{
+	height: 100%;
+	left: 0;
+}
+.scm-ui-content .scm-ui-comp .appended{
+	height: 100%;
+	right: 0;
+}
+.scm-ui-content .scm-ui-select > select,
+.scm-ui-content .scm-ui-input > input{
+	margin: 0;
+	border: 0;
+	border-radius: .5em;
+	height: auto;
+	min-height: 2.5em !important;
+	line-height: initial;
+	-webkit-transition: none;
+	transition: none;
+}
+.scm-ui-content .scm-ui-select.icon > select,
+.scm-ui-content .scm-ui-input.icon > input{
+	border-radius: .5em 0 0 .5em;
+}
+.scm-ui-content .scm-ui-select.icon > select.before,
+.scm-ui-content .scm-ui-input.icon > input.before{
+	border-radius: 0 .5em .5em 0;
+}
+.scm-ui-content input.number-input{
+	text-align: right;
+	padding-right: .25em;
+}
+.scm-ui-content .scm-ui-input > input.number-input::-webkit-outer-spin-button, 
+.scm-ui-content .scm-ui-input > input.number-input::-webkit-inner-spin-button{
+	margin-left: .25em;
+}
+.scm-ui-content .scm-ui-timer > .separator{
+    background-color: #FFF;
+}
+.scm-ui-content .scm-ui-select.icon .faicon{
+	pointer-events: none;
+}
+.scm-ui-content .scm-ui-select.icon select{
+	padding-right: 3em;
+}
+.scm-ui-content .scm-ui-input input{
+	color: #000;
+}
+.scm-ui-content .scm-ui-select select{
+	color: #000;
+	background-color: transparent;
+}
+.scm-ui-content .scm-ui-input.disabled input,
+.scm-ui-content .scm-ui-select.disabled select{
+	background-color: transparent;
+	color: #FFF;
+}
+input.scm-ui-upload-input{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    top:-9999px;
+    left:-9999px;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+/*--------------------------------------------------------------
+UI Tabs
+--------------------------------------------------------------*/
+
+.scm-ui-tabs{
+    background-color: transparent;
+    width: auto;
+    align-items: flex-start;
+}
+body:not( .disabled ) .scm-ui-tabs .scm-ui-tab{
+    pointer-events: all;
+}
+
+/*--------------------------------------------------------------
+UI Button 3D
+--------------------------------------------------------------*/
+
+.scm-ui-label.button3d{
+    flex-grow: 1;
+    box-shadow: .2em .2em 0 0 #777;
+}
+.scm-ui-label.button3d.action{
+    border: 0;
+}
+.scm-ui-label.button3d.color-it{
+    box-shadow: .2em .2em 0 0;
+}
+.scm-ui-label.button3d.on.lighter{
+    text-shadow: 1px 1px 0 rgba(255,255,255,.5);
+}
+.scm-ui-label.button3d.on.darker{
+    text-shadow: -1px -1px 0 rgba(0,0,0,.5);
+}
+.scm-ui-label.button3d.off{
+    /*margin: .45em .05em .05em .45em;*/
+    margin: .5em .0em .0em .5em;
+    box-shadow: 0 0 0 0 rgba(0,0,0,0);
+}
+body.keyboard .scm-ui-label.button3d.on:focus,
+body.keyboard .scm-ui-label.button3d.on.focus,
+.scm-ui-label.button3d.on:active{
+    border-color: #333;
+}
+body.keyboard .scm-ui-label.button3d:focus,
+body.keyboard .scm-ui-label.button3d.focus,
+.scm-ui-label.scm-ui-input.button3d:focus,
+.scm-ui-label.scm-ui-input.button3d.focus,
+.scm-ui-label.button3d:active{
+    box-shadow: -1px -1px 0 0 #333;
+    padding: .05em .45em 0 .5em;
+    margin: .55em -.0em 0em .55em;
+    height: 2.45em;
+    min-height: 2.45em;
+}
+
+/*--------------------------------------------------------------
+UI Login Form
+--------------------------------------------------------------*/
+
+.scm-ui-content .scm-ui-label.show-forgot{
+	text-align: center;
+	width: 100%;
+	background-color: transparent;
+	cursor: default;
+}
+.scm-ui-content .scm-ui-label.show-forgot label{
+	cursor: pointer;
+	color: #000;
+}
+.scm-ui-content .scm-ui-label.show-forgot:not(.disabled) label:hover{
+	text-decoration: underline;
+}
+input#login-show-forgot,
+input#login-show-forgot + form,
+input#login-show-forgot:checked + form + form{
+	display: none;
+}
+input#login-show-forgot:checked + form{
+	display: flex;
+}
+
+/*--------------------------------------------------------------
+Classes Colors
+--------------------------------------------------------------*/
+
+.colorit{
+    color: #444;
+    background-color: transparent;
+    border-color: #444;
+}
+.colorbg{
+    color: #FFF;
+    background-color: #444;
+}
+.colorfill > .svg{
+    background-color: transparent;
+}
+.colorfill > .svg *:not(.cls-2){
+    fill: #444;
+}
+.colorbg > .svg *:not(.cls-2){
+    fill: #FFF;
+}
+*[data-color="white"],
+.pin.white > i,
+.white > .pin,
+.bg-white,
+.bg-white:after,
+.bg-white:before{
+	border-color: #FFF;
+	background-color: #FFF;
+	color: #000;
+}
+*[data-color="white"],
+.txt-white,
+.white{
+	color: #FFF;
+}
+*[data-color="black"],
+.pin.black > i,
+.black > .pin,
+.bg-black,
+.bg-black:after,
+.bg-black:before{
+	border-color: #000;
+	background-color: #000;
+	color: #FFF;
+}
+*[data-color="black"],
+.txt-black,
+.black{
+	color: #000;
+}
+*[data-color="light-black"],
+.pin.light-black > i,
+.light-black > .pin,
+.bg-light-black,
+.bg-light-black:after,
+.bg-light-black:before{
+	border-color: #444;
+	background-color: #444;
+	color: #FFF;
+}
+*[data-color="light-black"],
+.txt-light-black,
+.light-black{
+	color: #444;
+}
+.bg-silver,
+.silver > .pin,
+*[data-color="silver"],
+.pin.silver > i,
+*[data-color="grey"],
+.pin.grey > i,
+.grey > .pin,
+.bg-grey,
+.bg-grey:after,
+.bg-grey:before{
+	border-color: #bbb;
+	background-color: #bbb;
+	color: #FFF;
+}
+*[data-color="silver"],
+.silver,
+*[data-color="grey"],
+.grey,
+.txt-grey{
+	color: #bbb;
+}
+*[data-color="light-grey"],
+.pin.light-grey > i,
+.light-grey > .pin,
+.bg-light-grey,
+.bg-light-grey:after,
+.bg-light-grey:before{
+	border-color: #ddd;
+	background-color: #ddd;
+	color: #000;
+}
+*[data-color="light-grey"],
+.light-grey,
+.txt-light-grey{
+	color: #ddd;
+}
+*[data-color="dark-grey"],
+.pin.dark-grey > i,
+.dark-grey > .pin,
+.bg-dark-grey,
+.bg-dark-grey:after,
+.bg-dark-grey:before{
+	border-color: #888;
+	background-color: #888;
+	color: #FFF;
+}
+*[data-color="dark-grey"],
+.dark-grey,
+.txt-dark-grey{
+	color: #888;
+}
+.bg-gold,
+.gold > .pin,
+*[data-color="gold"],
+.pin.gold > i,
+*[data-color="yellow"],
+.pin.yellow > i,
+.yellow > .pin,
+.bg-yellow,
+.bg-yellow:after,
+.bg-yellow:before{
+	border-color: #e4cb00;
+	background-color: #e4cb00;
+	color: #FFF;
+}
+*[data-color="gold"],
+.gold,
+*[data-color="yellow"],
+.yellow,
+.txt-yellow{
+	color: #e4cb00;
+}
+.bg-bronze,
+.bronze > .pin,
+*[data-color="bronze"],
+.pin.bronze > i,
+*[data-color="orange"],
+.pin.orange > i,
+.orange > .pin,
+.bg-orange,
+.bg-orange:after,
+.bg-orange:before{
+	border-color: #dca856;
+	background-color: #dca856;
+	color: #FFF;
+}
+*[data-color="bronze"],
+.bronze,
+*[data-color="orange"],
+.orange,
+.txt-orange{
+	color: #dca856;
+}
+.bg-wood,
+.wood > .pin,
+*[data-color="wood"],
+.pin.wood > i,
+*[data-color="brown"],
+.pin.brown > i,
+.brown > .pin,
+.bg-brown,
+.bg-brown:after,
+.bg-brown:before{
+	border-color: #9a714d;
+	background-color: #9a714d;
+	color: #FFF;
+}
+*[data-color="wood"],
+.wood,
+*[data-color="brown"],
+.brown,
+.txt-brown{
+	color: #9a714d;
+}
+*[data-color="blue"],
+.pin.blue > i,
+.blue > .pin,
+.bg-blue,
+.bg-blue:after,
+.bg-blue:before{
+	border-color: #1c3fff;
+	background-color: #1c3fff;
+	color: #FFF;
+}
+*[data-color="blue"],
+.blue,
+.txt-blue{
+	color: #1c3fff;
+}
+*[data-color="light-blue"],
+.pin.light-blue > i,
+.light-blue > .pin,
+.bg-light-blue,
+.bg-light-blue:after,
+.bg-light-blue:before{
+	border-color: #57bef1;
+	background-color: #57bef1;
+	color: #FFF;
+}
+*[data-color="light-blue"],
+.light-blue,
+.txt-light-blue{
+	color: #57bef1;
+}
+*[data-color="green"],
+.pin.green > i,
+.green > .pin,
+.bg-green,
+.bg-green:after,
+.bg-green:before{
+	border-color: #1d9401;
+	background-color: #1d9401;
+	color: #FFF;
+}
+*[data-color="green"],
+.green,
+.txt-green{
+	color: #1d9401;
+}
+*[data-color="light-green"],
+.pin.light-green > i,
+.light-green > .pin,
+.bg-light-green,
+.bg-light-green:after,
+.bg-light-green:before{
+	border-color: #7ec14d;
+	background-color: #7ec14d;
+	color: #FFF;
+}
+*[data-color="light-green"],
+.light-green,
+.txt-light-green{
+	color: #7ec14d;
+}
+*[data-color="red"],
+.pin.red > i,
+.red > .pin,
+.bg-red,
+.bg-red:after,
+.bg-red:before{
+	border-color: #e03c5c;
+	background-color: #e03c5c;
+	color: #FFF;
+}
+*[data-color="red"],
+.red,
+.txt-red{
+	color: #e03c5c;
+}
+*[data-color="light-red"],
+.pin.light-red > i,
+.light-red > .pin,
+.bg-light-red,
+.bg-light-red:after,
+.bg-light-red:before{
+	border-color: #d46d6d;
+	background-color: #d46d6d;
+	color: #FFF;
+}
+*[data-color="light-red"],
+.light-red,
+.txt-light-red{
+	color: #d46d6d;
+}
+*[data-color="purple"],
+.pin.purple > i,
+.purple > .pin,
+.bg-purple,
+.bg-purple:after,
+.bg-purple:before{
+	border-color: #8823b9;
+	background-color: #8823b9;
+	color: #FFF;
+}
+*[data-color="purple"],
+.purple,
+.txt-purple{
+	color: #8823b9;
+}
+*[data-color="light-purple"],
+.pin.light-purple > i,
+.light-purple > .pin,
+.bg-light-purple,
+.bg-light-purple:after,
+.bg-light-purple:before{
+	border-color: #c48be0;
+	background-color: #c48be0;
+	color: #FFF;
+}
+*[data-color="light-purple"],
+.light-purple,
+.txt-light-purple{
+	color: #c48be0;
+}
+*[data-color="pink"],
+.pin.pink > i,
+.pink > .pin,
+.bg-pink,
+.bg-pink:after,
+.bg-pink:before{
+	border-color: #e681df;
+	background-color: #e681df;
+	color: #FFF;
+}
+*[data-color="pink"],
+.pink,
+.txt-pink{
+	color: #e681df;
+}
+*[data-color="light-pink"],
+.pin.light-pink > i,
+.light-pink > .pin,
+.bg-light-pink,
+.bg-light-pink:after,
+.bg-light-pink:before{
+	border-color: #f5adf0;
+	background-color: #f5adf0;
+	color: #FFF;
+}
+*[data-color="light-pink"],
+.light-pink,
+.txt-light-pink{
+	color: #f5adf0;
+}
+
