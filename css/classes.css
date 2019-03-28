@@ -468,7 +468,8 @@ Classes Floating
 .align-center, .aligncenter, .float-center, .floatcenter,
 .content-float-center > *, .all-float-center * {
   clear: both;
-  margin: 0 auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
   display: block; }
 
 .clear-none {
