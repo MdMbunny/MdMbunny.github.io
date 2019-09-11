@@ -1,13 +1,13 @@
 /*
-Version:      v1.0.5
-License:      GNU General Public License v2 or later
-License URI:    http://www.gnu.org/licenses/gpl-2.0.html
-Description:    Reset CSS
-Author:       Studio Creativo M di Francesco Mazzola
-Text Domain:    scm
+Version:          v1.0.6
+License:          GNU General Public License v2 or later
+License URI:      http://www.gnu.org/licenses/gpl-2.0.html
+Description:      Reset CSS
+Author:           Studio Creativo M di Francesco Mazzola
+Text Domain:      scm
 GitHub Theme URI: MdMbunny/reset
 GitHub Branch:    master
-Contact:      http://www.studiocreativo-m.it
+Contact:          http://www.studiocreativo-m.it
 */
 
 /*--------------------------------------------------------------
@@ -212,20 +212,22 @@ Reset Icons
 .fas,
 .far,
 .fal,
-.fab{
+.fab,
+.fad{
   /*font-size: 1em;*/
   line-height: 0;
-    vertical-align: initial;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column nowrap;
+  vertical-align: initial;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+flex-flow: column nowrap;
 }
 .fa:before,
 .fas:before,
 .far:before,
 .fal:before,
-.fab:before{
+.fab:before,
+.fad:before{
   line-height: 1em;
 }
 .fa-stack{
@@ -434,7 +436,8 @@ span.continue .fa,
 span.continue .fas,
 span.continue .far,
 span.continue .fal,
-span.continue .fab{
+span.continue .fab,
+span.continue .fad{
   margin-left: .25em;
 }
 
