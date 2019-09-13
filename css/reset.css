@@ -227,7 +227,8 @@ flex-flow: column nowrap;
 .far:before,
 .fal:before,
 .fab:before,
-.fad:before{
+.fad:before,
+.fad:after{
   line-height: 1em;
 }
 .fa-stack{
