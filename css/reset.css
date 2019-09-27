@@ -1,5 +1,5 @@
 /*
-Version:          v1.0.7
+Version:          v1.0.8
 License:          GNU General Public License v2 or later
 License URI:      http://www.gnu.org/licenses/gpl-2.0.html
 Description:      Reset CSS
@@ -27,7 +27,7 @@ Reset General
   background-color: #000;
   color: #FFF;
 }
-*{
+body *{
   vertical-align: top;
   font-style: inherit;
   font-weight: inherit;
@@ -42,7 +42,7 @@ Reset General
   position: relative;
   -webkit-tap-highlight-color: transparent;
 }
-*, *:before, *:after{
+body *, body *:before, body *:after{
   box-sizing: inherit;
 }
 html{
@@ -61,7 +61,7 @@ html{
   min-height: 100%;
 }
 body{
-  position: static;
+  /*position: static;*/
   background: #FFF;
   min-height: 100%;
   font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, Helvetica, Arial, san-serif;
