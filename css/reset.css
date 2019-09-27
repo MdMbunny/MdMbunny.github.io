@@ -1,5 +1,5 @@
 /*
-Version:          v1.0.6
+Version:          v1.0.7
 License:          GNU General Public License v2 or later
 License URI:      http://www.gnu.org/licenses/gpl-2.0.html
 Description:      Reset CSS
@@ -58,6 +58,7 @@ html{
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 100%;
+  min-height: 100%;
 }
 body{
   position: static;
